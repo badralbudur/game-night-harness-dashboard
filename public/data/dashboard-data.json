@@ -1,7 +1,7 @@
 {
   "project": {
     "name": "Game Night Harness",
-    "subtitle": "Task-specific harness observatory — Generator ↔ Evaluator milestones",
+    "subtitle": "Task-specific harness observatory \u2014 Generator \u2194 Evaluator milestones",
     "workspace": "team/game-night-v1",
     "harnessRepo": "https://github.com/badralbudur/game-night-harness",
     "deliverableRepo": "https://github.com/badralbudur/game-night",
@@ -10,54 +10,99 @@
   "overview": {
     "currentMilestone": "M2",
     "currentMilestoneTitle": "Core round-flow engine",
-    "completedMilestones": ["M1"],
+    "completedMilestones": [
+      "M1"
+    ],
     "totalMilestones": 7,
-    "retryMode": "Manual — automatic retries disabled",
+    "retryMode": "Manual \u2014 automatic retries disabled",
     "workspaceStatus": "Ready for next manual run"
   },
   "checkpoint": {
-    "headline": "M1 is landed. M2 is charted.",
-    "whereWeAre": "The game’s identity and seed content are evaluator-approved and in main. The harness is in manual, one-attempt mode: no unattended backoff while we are still shaping the process.",
-    "whereWeGo": "Create the M2 milestone branch and review PR, then build and independently test the lockstep round engine, queue rules, blind-voting data boundary, and fallback paths.",
-    "nextAction": "Run M2 once manually; its branch remains reviewable until Evaluator approval permits merge."
+    "headline": "M1: PASS",
+    "whereWeAre": "M1 (Game content seeding) passed independent evaluation and is merged in the deliverable's main branch. The harness now runs in manual, no-automatic-retry mode while we refine the process.",
+    "whereWeGo": "M2 (Core round-flow engine) is next: a review branch and private PR will hold the lockstep timer, queue/rotation rules, blind-voting data boundary, and fallback behavior until independent approval.",
+    "nextAction": "Run one explicit M2 Generator \u2192 Evaluator attempt. The Generator commits only to the coordinator-created M2 branch; the PR merges only after a PASS verdict."
   },
   "milestones": [
-    {"id":"M1","title":"Game content seeding","status":"passed","detail":"48 import needs, 148-city gazetteer, 36 mayor questions, game/newspaper identity."},
-    {"id":"M2","title":"Core round-flow engine","status":"current","detail":"Lockstep rounds, city queue, blind-voting data and fallback paths."},
-    {"id":"M3","title":"Economy","status":"queued","detail":"2d6-style profits, cumulative leaderboard and disclosure rules."},
-    {"id":"M4","title":"Facilitator questions","status":"queued","detail":"Two-slot check-in and aggregate-answer data model."},
-    {"id":"M5","title":"Newspaper generation & publication","status":"queued","detail":"Private archive, prose, identity redaction and edition images."},
-    {"id":"M6","title":"Endgame content","status":"queued","detail":"Winner, twist article and city portraits/excess."},
-    {"id":"M7","title":"Full integration & regression","status":"queued","detail":"Complete simulated game and full-spec validation."}
+    {
+      "id": "M1",
+      "title": "Game content seeding",
+      "status": "passed",
+      "detail": "48 import needs, 148-city gazetteer, 36 mayor questions, game/newspaper identity."
+    },
+    {
+      "id": "M2",
+      "title": "Core round-flow engine",
+      "status": "current",
+      "detail": "Lockstep rounds, city queue, blind-voting data and fallback paths."
+    },
+    {
+      "id": "M3",
+      "title": "Economy",
+      "status": "queued",
+      "detail": "2d6-style profits, cumulative leaderboard and disclosure rules."
+    },
+    {
+      "id": "M4",
+      "title": "Facilitator questions",
+      "status": "queued",
+      "detail": "Two-slot check-in and aggregate-answer data model."
+    },
+    {
+      "id": "M5",
+      "title": "Newspaper generation & publication",
+      "status": "queued",
+      "detail": "Private archive, prose, identity redaction and edition images."
+    },
+    {
+      "id": "M6",
+      "title": "Endgame content",
+      "status": "queued",
+      "detail": "Winner, twist article and city portraits/excess."
+    },
+    {
+      "id": "M7",
+      "title": "Full integration & regression",
+      "status": "queued",
+      "detail": "Complete simulated game and full-spec validation."
+    }
   ],
   "runs": [
     {
-      "time":"2026-08-20T23:33:48Z",
-      "milestone":"Pre-milestone",
-      "status":"escalated",
-      "title":"Initial full-spec run",
-      "detail":"Separate Generator and Evaluator sessions independently exposed missing noninteractive write permission. Harness fixed with explicit permission mode."
+      "time": "2026-08-20T23:33:48Z",
+      "milestone": "Pre-milestone",
+      "status": "escalated",
+      "title": "Initial full-spec run",
+      "detail": "Separate Generator and Evaluator sessions independently exposed missing noninteractive write permission. Harness fixed with explicit permission mode."
     },
     {
-      "time":"2026-08-21T16:16:00Z",
-      "milestone":"Pre-milestone",
-      "status":"escalated",
-      "title":"Full-spec build exceeded provider session limit",
-      "detail":"Partial work was substantial but too large for one unit. This evidence drove milestone decomposition."
+      "time": "2026-08-21T16:16:00Z",
+      "milestone": "Pre-milestone",
+      "status": "escalated",
+      "title": "Full-spec build exceeded provider session limit",
+      "detail": "Partial work was substantial but too large for one unit. This evidence drove milestone decomposition."
     },
     {
-      "time":"2026-08-21T17:15:14Z",
-      "milestone":"M1",
-      "status":"escalated",
-      "title":"M1 content verified but uncommitted",
-      "detail":"Evaluator passed content quality but correctly failed the milestone because role sandbox blocked git commit. Process changed, then Generator-only allowlist was verified."
+      "time": "2026-08-21T17:15:14Z",
+      "milestone": "M1",
+      "status": "escalated",
+      "title": "M1 content verified but uncommitted",
+      "detail": "Evaluator passed content quality but correctly failed the milestone because role sandbox blocked git commit. Process changed, then Generator-only allowlist was verified."
     },
     {
-      "time":"2026-08-21T22:01:29Z",
-      "milestone":"M1",
-      "status":"passed",
-      "title":"M1: Game content seeding approved",
-      "detail":"Independent Evaluator PASS. Deliverable includes Sister Cities / The Daily Manifest, seeded needs, gazetteer and mayor-question bank."
+      "time": "2026-08-21T22:01:29Z",
+      "milestone": "M1",
+      "status": "passed",
+      "title": "M1: Game content seeding approved",
+      "detail": "Independent Evaluator PASS. Deliverable includes Sister Cities / The Daily Manifest, seeded needs, gazetteer and mayor-question bank."
+    },
+    {
+      "fingerprint": "2026-08-21T22:00:00Z|M1|PASS",
+      "time": "2026-08-21T22:00:00Z",
+      "milestone": "M1",
+      "status": "passed",
+      "title": "M1: PASS",
+      "detail": "M1 (Game content seeding) passed independent evaluation and is merged in the deliverable's main branch. The harness now runs in manual, no-automatic-retry mode while we refine the process."
     }
   ],
   "harnessEvolution": [
@@ -71,14 +116,14 @@
   ],
   "openItems": [
     {
-      "kind":"Spec decision",
-      "status":"open",
-      "text":"Image-generation modality: does a game-state-informed procedural/SVG image satisfy the per-edition/per-city image requirement, or must a raster image provider be configured?"
+      "kind": "Spec decision",
+      "status": "open",
+      "text": "Image-generation modality: does a game-state-informed procedural/SVG image satisfy the per-edition/per-city image requirement, or must a raster image provider be configured?"
     },
     {
-      "kind":"Next action",
-      "status":"ready",
-      "text":"Create M2 milestone branch + private PR, then run one manual Generator → Evaluator attempt with automatic retries disabled."
+      "kind": "Next action",
+      "status": "ready",
+      "text": "Create M2 milestone branch + private PR, then run one manual Generator \u2192 Evaluator attempt with automatic retries disabled."
     }
   ]
 }
