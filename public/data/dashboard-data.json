@@ -5,24 +5,23 @@
     "workspace": "team/game-night-v1",
     "harnessRepo": "https://github.com/badralbudur/game-night-harness",
     "deliverableRepo": "https://github.com/badralbudur/game-night",
-    "lastUpdated": "2026-08-21T23:24:33Z"
+    "lastUpdated": "2026-08-21T23:30:00Z"
   },
   "overview": {
-    "currentMilestone": "M3",
-    "currentMilestoneTitle": "Economy",
+    "currentMilestone": "M2",
+    "currentMilestoneTitle": "Core round-flow engine",
     "completedMilestones": [
-      "M1",
-      "M2"
+      "M1"
     ],
     "totalMilestones": 7,
     "retryMode": "Manual \u2014 automatic retries disabled",
-    "workspaceStatus": "Ready for next manual run"
+    "workspaceStatus": "Needs operator review"
   },
   "checkpoint": {
-    "headline": "M2: PASS",
-    "whereWeAre": "M2 passed independent evaluation and its approved PR merged into main.",
-    "whereWeGo": "The harness now moves to M3: Economy (profit rolls, leaderboard).",
-    "nextAction": "Create/resume the M3 review branch and run one explicit manual Generator \u2192 Evaluator attempt."
+    "headline": "M2: ESCALATED \u2014 M2 regression",
+    "whereWeAre": "M2 was provisionally merged after static/manual evaluation, but executable regression validation exposed one failing test: 138/139 tests pass and one check-in slot deadline test errors with `KeyError: 'deadline'`. M3 is blocked; only M1 remains accepted in workspace progress.",
+    "whereWeGo": "Reopen M2 as a corrective milestone with the now-fixed narrow Python test-runner permissions. The Generator must fix the engine/test mismatch on a new review branch, and the separate Evaluator must run the full declared suite before approval.",
+    "nextAction": "Create a corrective M2 branch and PR, run one manual Generator \u2192 Evaluator attempt with `python3 run_tests.py` executable in both role sessions, and merge only if the recorded suite result passes."
   },
   "milestones": [
     {
@@ -120,6 +119,14 @@
       "status": "passed",
       "title": "M2: PASS",
       "detail": "M2 passed independent evaluation and its approved PR merged into main."
+    },
+    {
+      "fingerprint": "2026-08-21T23:30:00Z|M2|ESCALATED \u2014 M2 regression",
+      "time": "2026-08-21T23:30:00Z",
+      "milestone": "M2",
+      "status": "escalated",
+      "title": "M2: ESCALATED \u2014 M2 regression",
+      "detail": "M2 was provisionally merged after static/manual evaluation, but executable regression validation exposed one failing test: 138/139 tests pass and one check-in slot deadline test errors with `KeyError: 'deadline'`. M3 is blocked; only M1 remains accepted in workspace progress."
     }
   ],
   "harnessEvolution": [
