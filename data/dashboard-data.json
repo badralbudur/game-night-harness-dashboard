@@ -15,6 +15,12 @@
     "retryMode": "Manual — automatic retries disabled",
     "workspaceStatus": "Ready for next manual run"
   },
+  "checkpoint": {
+    "headline": "M1 is landed. M2 is charted.",
+    "whereWeAre": "The game’s identity and seed content are evaluator-approved and in main. The harness is in manual, one-attempt mode: no unattended backoff while we are still shaping the process.",
+    "whereWeGo": "Create the M2 milestone branch and review PR, then build and independently test the lockstep round engine, queue rules, blind-voting data boundary, and fallback paths.",
+    "nextAction": "Run M2 once manually; its branch remains reviewable until Evaluator approval permits merge."
+  },
   "milestones": [
     {"id":"M1","title":"Game content seeding","status":"passed","detail":"48 import needs, 148-city gazetteer, 36 mayor questions, game/newspaper identity."},
     {"id":"M2","title":"Core round-flow engine","status":"current","detail":"Lockstep rounds, city queue, blind-voting data and fallback paths."},

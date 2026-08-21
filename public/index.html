@@ -20,6 +20,16 @@
 
     <section class="metrics" id="metrics"></section>
 
+    <section class="checkpoint panel" id="checkpoint">
+      <div class="checkpoint-mark" aria-hidden="true">✦</div>
+      <div><p class="eyebrow">EXPEDITION LOG · LATEST FIX</p><h2 id="checkpoint-headline"></h2></div>
+      <div class="checkpoint-grid">
+        <article><p class="eyebrow">WHERE WE ARE</p><p id="where-we-are"></p></article>
+        <article><p class="eyebrow">WHERE WE'RE GOING</p><p id="where-we-go"></p></article>
+        <article class="next-action"><p class="eyebrow">NEXT BEARING</p><p id="next-action"></p></article>
+      </div>
+    </section>
+
     <section class="panel milestone-panel">
       <header class="section-heading"><div><p class="eyebrow">PIPELINE</p><h2>Milestone Flight Plan</h2></div><p class="legend"><i class="passed"></i> passed <i class="current"></i> current <i class="queued"></i> queued</p></header>
       <ol class="milestones" id="milestones"></ol>
@@ -27,8 +37,10 @@
 
     <section class="two-col">
       <section class="panel">
-        <header class="section-heading"><div><p class="eyebrow">EVIDENCE</p><h2>Harness Run Timeline</h2></div></header>
-        <div class="timeline" id="timeline"></div>
+        <header class="section-heading timeline-heading"><div><p class="eyebrow">EVIDENCE</p><h2>Harness Run Timeline</h2></div><div class="timeline-controls"><button id="zoom-out" aria-label="Zoom out timeline">−</button><input id="timeline-zoom" type="range" min="1" max="5" value="1" aria-label="Timeline zoom"><button id="zoom-in" aria-label="Zoom in timeline">+</button></div></header>
+        <p class="timeline-hint">Scroll sideways to travel the run history. Use the zoom control or mouse wheel over the chart to inspect detail; select any marker for its evidence.</p>
+        <div class="timeline-viewport" id="timeline-viewport"><div class="timeline-track" id="timeline"></div></div>
+        <article class="timeline-detail" id="timeline-detail"><p class="eyebrow">SELECT A RUN MARKER</p><p>Choose a point on the timeline to read the recorded outcome and what it changed.</p></article>
       </section>
       <section class="panel">
         <header class="section-heading"><div><p class="eyebrow">GOVERNANCE</p><h2>Open Items</h2></div></header>
