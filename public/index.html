@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex, nofollow">
+  <title>Game Night Harness Observatory</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main class="shell" id="app" aria-live="polite">
+    <section class="hero panel">
+      <div>
+        <p class="eyebrow">PRIVATE PROJECT OBSERVATORY</p>
+        <h1 id="project-name">Loading harness status…</h1>
+        <p id="project-subtitle" class="subtitle"></p>
+      </div>
+      <div class="signal" id="signal"><span></span><b>SYNCED</b><small id="updated"></small></div>
+    </section>
+
+    <section class="metrics" id="metrics"></section>
+
+    <section class="panel milestone-panel">
+      <header class="section-heading"><div><p class="eyebrow">PIPELINE</p><h2>Milestone Flight Plan</h2></div><p class="legend"><i class="passed"></i> passed <i class="current"></i> current <i class="queued"></i> queued</p></header>
+      <ol class="milestones" id="milestones"></ol>
+    </section>
+
+    <section class="two-col">
+      <section class="panel">
+        <header class="section-heading"><div><p class="eyebrow">EVIDENCE</p><h2>Harness Run Timeline</h2></div></header>
+        <div class="timeline" id="timeline"></div>
+      </section>
+      <section class="panel">
+        <header class="section-heading"><div><p class="eyebrow">GOVERNANCE</p><h2>Open Items</h2></div></header>
+        <ul class="open-items" id="open-items"></ul>
+        <div class="rule"></div>
+        <p class="eyebrow">EVOLUTION LOG</p>
+        <ul class="evolution" id="evolution"></ul>
+      </section>
+    </section>
+
+    <section class="panel links">
+      <p><b>Workspace:</b> <code id="workspace"></code></p>
+      <p><a id="harness-repo" target="_blank" rel="noreferrer">Harness repository ↗</a><a id="deliverable-repo" target="_blank" rel="noreferrer">Deliverable repository ↗</a></p>
+    </section>
+  </main>
+  <script src="app.js"></script>
+</body>
+</html>
