@@ -5,7 +5,7 @@
     "workspace": "team/game-night-v1",
     "harnessRepo": "https://github.com/badralbudur/game-night-harness",
     "deliverableRepo": "https://github.com/badralbudur/game-night",
-    "lastUpdated": "2026-08-21T23:30:00Z"
+    "lastUpdated": "2026-08-21T23:30:11Z"
   },
   "overview": {
     "currentMilestone": "M2",
@@ -18,10 +18,10 @@
     "workspaceStatus": "Needs operator review"
   },
   "checkpoint": {
-    "headline": "M2: ESCALATED \u2014 M2 regression",
-    "whereWeAre": "M2 was provisionally merged after static/manual evaluation, but executable regression validation exposed one failing test: 138/139 tests pass and one check-in slot deadline test errors with `KeyError: 'deadline'`. M3 is blocked; only M1 remains accepted in workspace progress.",
-    "whereWeGo": "Reopen M2 as a corrective milestone with the now-fixed narrow Python test-runner permissions. The Generator must fix the engine/test mismatch on a new review branch, and the separate Evaluator must run the full declared suite before approval.",
-    "nextAction": "Create a corrective M2 branch and PR, run one manual Generator \u2192 Evaluator attempt with `python3 run_tests.py` executable in both role sessions, and merge only if the recorded suite result passes."
+    "headline": "M2: ESCALATED",
+    "whereWeAre": "M2 stopped without an approved result: Deliverable working tree is dirty before preparing M2; refusing to switch branches and risk mixing work.",
+    "whereWeGo": "Resolve the recorded blocker or adjust the harness/process; do not silently retry while manual mode disables automatic retries.",
+    "nextAction": "Review team/game-night-v1/escalation/20260821-233008_escalation-M2-run0.md, make the necessary evidence-backed change, then explicitly start a new coordinator run."
   },
   "milestones": [
     {
@@ -127,6 +127,14 @@
       "status": "escalated",
       "title": "M2: ESCALATED \u2014 M2 regression",
       "detail": "M2 was provisionally merged after static/manual evaluation, but executable regression validation exposed one failing test: 138/139 tests pass and one check-in slot deadline test errors with `KeyError: 'deadline'`. M3 is blocked; only M1 remains accepted in workspace progress."
+    },
+    {
+      "fingerprint": "2026-08-21T23:30:11Z|M2|ESCALATED",
+      "time": "2026-08-21T23:30:11Z",
+      "milestone": "M2",
+      "status": "escalated",
+      "title": "M2: ESCALATED",
+      "detail": "M2 stopped without an approved result: Deliverable working tree is dirty before preparing M2; refusing to switch branches and risk mixing work."
     }
   ],
   "harnessEvolution": [
