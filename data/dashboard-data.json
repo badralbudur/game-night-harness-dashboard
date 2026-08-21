@@ -1,0 +1,78 @@
+{
+  "project": {
+    "name": "Game Night Harness",
+    "subtitle": "Task-specific harness observatory — Generator ↔ Evaluator milestones",
+    "workspace": "team/game-night-v1",
+    "harnessRepo": "https://github.com/badralbudur/game-night-harness",
+    "deliverableRepo": "https://github.com/badralbudur/game-night",
+    "lastUpdated": "2026-08-21T22:00:00Z"
+  },
+  "overview": {
+    "currentMilestone": "M2",
+    "currentMilestoneTitle": "Core round-flow engine",
+    "completedMilestones": ["M1"],
+    "totalMilestones": 7,
+    "retryMode": "Manual — automatic retries disabled",
+    "workspaceStatus": "Ready for next manual run"
+  },
+  "milestones": [
+    {"id":"M1","title":"Game content seeding","status":"passed","detail":"48 import needs, 148-city gazetteer, 36 mayor questions, game/newspaper identity."},
+    {"id":"M2","title":"Core round-flow engine","status":"current","detail":"Lockstep rounds, city queue, blind-voting data and fallback paths."},
+    {"id":"M3","title":"Economy","status":"queued","detail":"2d6-style profits, cumulative leaderboard and disclosure rules."},
+    {"id":"M4","title":"Facilitator questions","status":"queued","detail":"Two-slot check-in and aggregate-answer data model."},
+    {"id":"M5","title":"Newspaper generation & publication","status":"queued","detail":"Private archive, prose, identity redaction and edition images."},
+    {"id":"M6","title":"Endgame content","status":"queued","detail":"Winner, twist article and city portraits/excess."},
+    {"id":"M7","title":"Full integration & regression","status":"queued","detail":"Complete simulated game and full-spec validation."}
+  ],
+  "runs": [
+    {
+      "time":"2026-08-20T23:33:48Z",
+      "milestone":"Pre-milestone",
+      "status":"escalated",
+      "title":"Initial full-spec run",
+      "detail":"Separate Generator and Evaluator sessions independently exposed missing noninteractive write permission. Harness fixed with explicit permission mode."
+    },
+    {
+      "time":"2026-08-21T16:16:00Z",
+      "milestone":"Pre-milestone",
+      "status":"escalated",
+      "title":"Full-spec build exceeded provider session limit",
+      "detail":"Partial work was substantial but too large for one unit. This evidence drove milestone decomposition."
+    },
+    {
+      "time":"2026-08-21T17:15:14Z",
+      "milestone":"M1",
+      "status":"escalated",
+      "title":"M1 content verified but uncommitted",
+      "detail":"Evaluator passed content quality but correctly failed the milestone because role sandbox blocked git commit. Process changed, then Generator-only allowlist was verified."
+    },
+    {
+      "time":"2026-08-21T22:01:29Z",
+      "milestone":"M1",
+      "status":"passed",
+      "title":"M1: Game content seeding approved",
+      "detail":"Independent Evaluator PASS. Deliverable includes Sister Cities / The Daily Manifest, seeded needs, gazetteer and mayor-question bank."
+    }
+  ],
+  "harnessEvolution": [
+    "Introduced portable RUNBOOK and doctor check.",
+    "Added durable escalation markers and no-op short-circuits.",
+    "Split full spec into seven independently gradeable milestones.",
+    "Formalized machine-readable verdict format and scoped UNTESTABLE findings.",
+    "Disabled automatic retries for current manual Discord operation.",
+    "Added Generator-owned milestone branches and review PR lifecycle.",
+    "Defined Harness Maintainer authority: automatic knowledge/milestone/process changes; user-only spec and decision changes."
+  ],
+  "openItems": [
+    {
+      "kind":"Spec decision",
+      "status":"open",
+      "text":"Image-generation modality: does a game-state-informed procedural/SVG image satisfy the per-edition/per-city image requirement, or must a raster image provider be configured?"
+    },
+    {
+      "kind":"Next action",
+      "status":"ready",
+      "text":"Create M2 milestone branch + private PR, then run one manual Generator → Evaluator attempt with automatic retries disabled."
+    }
+  ]
+}
