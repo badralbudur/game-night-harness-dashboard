@@ -5,7 +5,7 @@
     "workspace": "team/game-night-v1",
     "harnessRepo": "https://github.com/badralbudur/game-night-harness",
     "deliverableRepo": "https://github.com/badralbudur/game-night",
-    "lastUpdated": "2026-08-22T17:46:10Z"
+    "lastUpdated": "2026-08-22T20:48:14Z"
   },
   "overview": {
     "currentMilestone": "M2",
@@ -179,6 +179,14 @@
     {
       "fingerprint": "2026-08-22T17:46:10Z|M2|ESCALATED \u2014 BLOCKED",
       "time": "2026-08-22T17:46:10Z",
+      "milestone": "M2",
+      "status": "escalated",
+      "title": "M2: ESCALATED \u2014 BLOCKED",
+      "detail": "M2 remains blocked by the open escalation: Deliverable working tree is dirty before preparing M2; refusing to switch branches and risk mixing work."
+    },
+    {
+      "fingerprint": "2026-08-22T20:48:14Z|M2|ESCALATED \u2014 BLOCKED",
+      "time": "2026-08-22T20:48:14Z",
       "milestone": "M2",
       "status": "escalated",
       "title": "M2: ESCALATED \u2014 BLOCKED",
