@@ -14,7 +14,7 @@
       "M1"
     ],
     "totalMilestones": 7,
-    "retryMode": "Automatic — bounded retries enabled",
+    "retryMode": "Automatic \u2014 bounded retries enabled",
     "workspaceStatus": "Needs operator review"
   },
   "checkpoint": {
