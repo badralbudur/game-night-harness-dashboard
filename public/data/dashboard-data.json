@@ -5,7 +5,7 @@
     "workspace": "team/game-night-v1",
     "harnessRepo": "https://github.com/badralbudur/game-night-harness",
     "deliverableRepo": "https://github.com/badralbudur/game-night",
-    "lastUpdated": "2026-08-22T02:35:20Z"
+    "lastUpdated": "2026-08-22T05:38:10Z"
   },
   "overview": {
     "currentMilestone": "M2",
@@ -20,8 +20,8 @@
   "checkpoint": {
     "headline": "M2: ESCALATED",
     "whereWeAre": "M2 stopped without an approved result: Deliverable working tree is dirty before preparing M2; refusing to switch branches and risk mixing work.",
-    "whereWeGo": "Resolve the recorded blocker or adjust the harness/process; do not silently retry while manual mode disables automatic retries.",
-    "nextAction": "Review team/game-night-v1/escalation/20260822-023517_escalation-M2-run0.md, make the necessary evidence-backed change, then explicitly start a new coordinator run."
+    "whereWeGo": "Resolve the recorded blocker or adjust the harness/process. Automatic role/verdict retries are enabled, but this safety escalation remains blocked until its recorded precondition is resolved.",
+    "nextAction": "Review team/game-night-v1/escalation/20260822-053808_escalation-M2-run0.md, make the necessary evidence-backed change, then allow the next scheduled coordinator run to resume."
   },
   "milestones": [
     {
@@ -139,6 +139,14 @@
     {
       "fingerprint": "2026-08-22T02:35:20Z|M2|ESCALATED",
       "time": "2026-08-22T02:35:20Z",
+      "milestone": "M2",
+      "status": "escalated",
+      "title": "M2: ESCALATED",
+      "detail": "M2 stopped without an approved result: Deliverable working tree is dirty before preparing M2; refusing to switch branches and risk mixing work."
+    },
+    {
+      "fingerprint": "2026-08-22T05:38:10Z|M2|ESCALATED",
+      "time": "2026-08-22T05:38:10Z",
       "milestone": "M2",
       "status": "escalated",
       "title": "M2: ESCALATED",
