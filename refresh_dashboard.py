@@ -52,6 +52,7 @@ def main() -> int:
 
     outcome = metadata(status, "Outcome") or "UPDATED"
     milestone = metadata(status, "Milestone") or data["overview"]["currentMilestone"]
+    retry_mode = metadata(status, "Retry mode")
     updated = metadata(status, "Updated") or datetime.now(timezone.utc).replace(microsecond=0).isoformat().replace("+00:00", "Z")
     where = section(status, "Where we are") or data["checkpoint"]["whereWeAre"]
     going = section(status, "Where we're going") or data["checkpoint"]["whereWeGo"]
@@ -64,6 +65,10 @@ def main() -> int:
     }
     data["project"]["lastUpdated"] = updated
     data["overview"]["workspaceStatus"] = "Needs operator review" if "ESCALATED" in outcome else "Ready for next manual run"
+    if retry_mode == "automatic-enabled":
+        data["overview"]["retryMode"] = "Automatic — bounded retries enabled"
+    elif retry_mode == "manual":
+        data["overview"]["retryMode"] = "Manual — automatic retries disabled"
 
     fingerprint = f"{updated}|{milestone}|{outcome}"
     known = {run.get("fingerprint") for run in data.get("runs", [])}
