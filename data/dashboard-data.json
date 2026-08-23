@@ -5,7 +5,7 @@
     "workspace": "team/game-night-v1",
     "harnessRepo": "https://github.com/badralbudur/game-night-harness",
     "deliverableRepo": "https://github.com/badralbudur/game-night",
-    "lastUpdated": "2026-08-22T23:49:53Z"
+    "lastUpdated": "2026-08-23T23:56:02Z"
   },
   "overview": {
     "currentMilestone": "M2",
@@ -18,10 +18,10 @@
     "workspaceStatus": "Needs operator review"
   },
   "checkpoint": {
-    "headline": "M2: ESCALATED",
-    "whereWeAre": "M2 stopped without an approved result: Deliverable working tree is dirty before preparing M2; refusing to switch branches and risk mixing work.",
-    "whereWeGo": "Resolve the recorded blocker or adjust the harness/process. Automatic role/verdict retries are enabled, but this safety escalation remains blocked until its recorded precondition is resolved.",
-    "nextAction": "Review team/game-night-v1/escalation/20260822-234951_escalation-M2-run0.md, make the necessary evidence-backed change, then allow the next scheduled coordinator run to resume."
+    "headline": "M2: ESCALATED \u2014 BLOCKED",
+    "whereWeAre": "M2 remains blocked by the open escalation: Deliverable working tree is dirty before preparing M2; refusing to switch branches and risk mixing work.",
+    "whereWeGo": "The coordinator correctly made no destructive changes and will resume only after the recorded blocker is resolved.",
+    "nextAction": "Review team/game-night-v1/escalation/.latest.md and its referenced escalation evidence, resolve the precondition, then allow the next scheduled coordinator run to resume."
   },
   "milestones": [
     {
@@ -199,6 +199,14 @@
       "status": "escalated",
       "title": "M2: ESCALATED",
       "detail": "M2 stopped without an approved result: Deliverable working tree is dirty before preparing M2; refusing to switch branches and risk mixing work."
+    },
+    {
+      "fingerprint": "2026-08-23T23:56:02Z|M2|ESCALATED \u2014 BLOCKED",
+      "time": "2026-08-23T23:56:02Z",
+      "milestone": "M2",
+      "status": "escalated",
+      "title": "M2: ESCALATED \u2014 BLOCKED",
+      "detail": "M2 remains blocked by the open escalation: Deliverable working tree is dirty before preparing M2; refusing to switch branches and risk mixing work."
     }
   ],
   "harnessEvolution": [
