@@ -50,6 +50,18 @@ def main() -> int:
     if completed_ids:
         data["overview"]["completedMilestones"] = completed_ids
 
+    # Reconcile the visual flight plan from durable workspace progress on
+    # every refresh. Previously the overview advanced but the individual
+    # cards retained stale generator-time statuses (e.g. M2 looked current
+    # after milestone-progress had already moved to M3).
+    for milestone in data.get("milestones", []):
+        if milestone["id"] in completed_ids:
+            milestone["status"] = "passed"
+        elif milestone["id"] == current_id and current_id and not current_id.startswith("("):
+            milestone["status"] = "current"
+        elif milestone.get("status") == "current":
+            milestone["status"] = "queued"
+
     outcome = metadata(status, "Outcome") or "UPDATED"
     milestone = metadata(status, "Milestone") or data["overview"]["currentMilestone"]
     retry_mode = metadata(status, "Retry mode")
