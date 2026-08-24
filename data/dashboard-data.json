@@ -243,9 +243,9 @@
       "text": "Image-generation modality: does a game-state-informed procedural/SVG image satisfy the per-edition/per-city image requirement, or must a raster image provider be configured?"
     },
     {
-      "kind": "Next action",
+      "kind": "Current work",
       "status": "ready",
-      "text": "Create M2 milestone branch + private PR, then run one manual Generator \u2192 Evaluator attempt with automatic retries disabled."
+      "text": "Create/resume the M4 review branch and run one explicit manual Generator \u2192 Evaluator attempt."
     }
   ]
 }

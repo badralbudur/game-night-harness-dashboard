@@ -29,6 +29,10 @@ function renderTimeline(runs) {
   track.innerHTML = runs.map((run, index) => `<button class="run-marker ${esc(run.status)}" data-index="${index}" style="left:${((index + .5) / runs.length) * 100}%" aria-label="${esc(run.title)}: ${esc(run.status)}"><span>${String(index + 1).padStart(2, '0')}</span><b>${esc(run.milestone)}</b><time>${formatDate(run.time)}</time></button>`).join('');
   track.querySelectorAll('.run-marker').forEach(marker => marker.addEventListener('click', () => showDetail(Number(marker.dataset.index), marker)));
   updateWidth();
+  // A growing run history is most useful at its newest edge. Users can
+  // still scroll backward or zoom out, but every fresh load starts with
+  // the latest activity and selected latest marker in view.
+  requestAnimationFrame(() => { viewport.scrollLeft = viewport.scrollWidth; });
 
   const setZoom = (next) => {
     scale = Math.max(minScale, Math.min(maxScale, Math.round(next / step) * step));
