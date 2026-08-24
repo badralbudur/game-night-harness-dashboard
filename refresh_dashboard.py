@@ -87,8 +87,8 @@ def main() -> int:
     # next-action text with the durable status summary's current blocker
     # or next bearing on every publish.
     long_lived = [item for item in data.get("openItems", []) if item.get("kind") == "Spec decision"]
-    if "ESCALATED" in outcome:
-        live_item = {"kind": "Blocking issue", "status": "open", "text": where}
+    if "ESCALATED" in outcome or "DECISION" in outcome:
+        live_item = {"kind": "Blocking issue" if "ESCALATED" in outcome else "Decision required", "status": "open", "text": where}
     else:
         live_item = {"kind": "Current work", "status": "ready", "text": next_action}
     data["openItems"] = long_lived + [live_item]
