@@ -34,13 +34,13 @@
     {
       "id": "M2",
       "title": "Core round-flow engine",
-      "status": "current",
+      "status": "passed",
       "detail": "Lockstep rounds, city queue, blind-voting data and fallback paths."
     },
     {
       "id": "M3",
       "title": "Economy",
-      "status": "queued",
+      "status": "current",
       "detail": "2d6-style profits, cumulative leaderboard and disclosure rules."
     },
     {
