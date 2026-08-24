@@ -5,24 +5,25 @@
     "workspace": "team/game-night-v1",
     "harnessRepo": "https://github.com/badralbudur/game-night-harness",
     "deliverableRepo": "https://github.com/badralbudur/game-night",
-    "lastUpdated": "2026-08-24T16:25:26Z"
+    "lastUpdated": "2026-08-24T17:06:41Z"
   },
   "overview": {
-    "currentMilestone": "M3",
-    "currentMilestoneTitle": "Economy",
+    "currentMilestone": "M4",
+    "currentMilestoneTitle": "Facilitator questions",
     "completedMilestones": [
       "M1",
-      "M2"
+      "M2",
+      "M3"
     ],
     "totalMilestones": 7,
     "retryMode": "Automatic \u2014 bounded retries enabled",
     "workspaceStatus": "Ready for next manual run"
   },
   "checkpoint": {
-    "headline": "M2: PASS",
-    "whereWeAre": "M2 passed independent evaluation and its approved PR merged into main.",
-    "whereWeGo": "The harness now moves to M3: Economy (profit rolls, leaderboard).",
-    "nextAction": "Create/resume the M3 review branch and run one explicit manual Generator \u2192 Evaluator attempt."
+    "headline": "M3: PASS",
+    "whereWeAre": "M3 passed independent evaluation and its approved PR merged into main.",
+    "whereWeGo": "The harness now moves to M4: Facilitator two-slot question mechanic.",
+    "nextAction": "Create/resume the M4 review branch and run one explicit manual Generator \u2192 Evaluator attempt."
   },
   "milestones": [
     {
@@ -40,13 +41,13 @@
     {
       "id": "M3",
       "title": "Economy",
-      "status": "current",
+      "status": "passed",
       "detail": "2d6-style profits, cumulative leaderboard and disclosure rules."
     },
     {
       "id": "M4",
       "title": "Facilitator questions",
-      "status": "queued",
+      "status": "current",
       "detail": "Two-slot check-in and aggregate-answer data model."
     },
     {
@@ -216,6 +217,14 @@
       "status": "passed",
       "title": "M2: PASS",
       "detail": "M2 passed independent evaluation and its approved PR merged into main."
+    },
+    {
+      "fingerprint": "2026-08-24T17:06:41Z|M3|PASS",
+      "time": "2026-08-24T17:06:41Z",
+      "milestone": "M3",
+      "status": "passed",
+      "title": "M3: PASS",
+      "detail": "M3 passed independent evaluation and its approved PR merged into main."
     }
   ],
   "harnessEvolution": [
