@@ -5,23 +5,24 @@
     "workspace": "team/game-night-v1",
     "harnessRepo": "https://github.com/badralbudur/game-night-harness",
     "deliverableRepo": "https://github.com/badralbudur/game-night",
-    "lastUpdated": "2026-08-23T23:56:02Z"
+    "lastUpdated": "2026-08-24T16:25:26Z"
   },
   "overview": {
-    "currentMilestone": "M2",
-    "currentMilestoneTitle": "Core round-flow engine",
+    "currentMilestone": "M3",
+    "currentMilestoneTitle": "Economy",
     "completedMilestones": [
-      "M1"
+      "M1",
+      "M2"
     ],
     "totalMilestones": 7,
     "retryMode": "Automatic \u2014 bounded retries enabled",
-    "workspaceStatus": "Needs operator review"
+    "workspaceStatus": "Ready for next manual run"
   },
   "checkpoint": {
-    "headline": "M2: ESCALATED \u2014 BLOCKED",
-    "whereWeAre": "M2 remains blocked by the open escalation: Deliverable working tree is dirty before preparing M2; refusing to switch branches and risk mixing work.",
-    "whereWeGo": "The coordinator correctly made no destructive changes and will resume only after the recorded blocker is resolved.",
-    "nextAction": "Review team/game-night-v1/escalation/.latest.md and its referenced escalation evidence, resolve the precondition, then allow the next scheduled coordinator run to resume."
+    "headline": "M2: PASS",
+    "whereWeAre": "M2 passed independent evaluation and its approved PR merged into main.",
+    "whereWeGo": "The harness now moves to M3: Economy (profit rolls, leaderboard).",
+    "nextAction": "Create/resume the M3 review branch and run one explicit manual Generator \u2192 Evaluator attempt."
   },
   "milestones": [
     {
@@ -207,6 +208,14 @@
       "status": "escalated",
       "title": "M2: ESCALATED \u2014 BLOCKED",
       "detail": "M2 remains blocked by the open escalation: Deliverable working tree is dirty before preparing M2; refusing to switch branches and risk mixing work."
+    },
+    {
+      "fingerprint": "2026-08-24T16:25:26Z|M2|PASS",
+      "time": "2026-08-24T16:25:26Z",
+      "milestone": "M2",
+      "status": "passed",
+      "title": "M2: PASS",
+      "detail": "M2 passed independent evaluation and its approved PR merged into main."
     }
   ],
   "harnessEvolution": [
