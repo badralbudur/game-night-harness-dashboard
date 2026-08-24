@@ -82,6 +82,17 @@ def main() -> int:
     elif retry_mode == "manual":
         data["overview"]["retryMode"] = "Manual — automatic retries disabled"
 
+    # Open Items is a live operations panel, not a static project brief.
+    # Preserve explicit long-lived spec decisions, then replace stale
+    # next-action text with the durable status summary's current blocker
+    # or next bearing on every publish.
+    long_lived = [item for item in data.get("openItems", []) if item.get("kind") == "Spec decision"]
+    if "ESCALATED" in outcome:
+        live_item = {"kind": "Blocking issue", "status": "open", "text": where}
+    else:
+        live_item = {"kind": "Current work", "status": "ready", "text": next_action}
+    data["openItems"] = long_lived + [live_item]
+
     fingerprint = f"{updated}|{milestone}|{outcome}"
     known = {run.get("fingerprint") for run in data.get("runs", [])}
     if fingerprint not in known:
