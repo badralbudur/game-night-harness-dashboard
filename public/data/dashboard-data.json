@@ -5,7 +5,7 @@
     "workspace": "team/game-night-v1",
     "harnessRepo": "https://github.com/badralbudur/game-night-harness",
     "deliverableRepo": "https://github.com/badralbudur/game-night",
-    "lastUpdated": "2026-08-25T19:37:01Z"
+    "lastUpdated": "2026-08-25T21:39:56Z"
   },
   "overview": {
     "currentMilestone": "M5",
@@ -21,10 +21,10 @@
     "workspaceStatus": "Needs operator review"
   },
   "checkpoint": {
-    "headline": "M5: ESCALATED \u2014 TRANSIENT PROVIDER LIMIT",
-    "whereWeAre": "M5 Generator produced partial, uncommitted work on the active M5 branch (`newspaper/`, newspaper content/tests, and image/config preparation), then hit the Opus session limit twice. The work remains preserved for the next Generator resumption; no deliverable code was manually committed or discarded.",
-    "whereWeGo": "This is a transient provider-capacity failure, not a durable spec/state blocker. After the provider resets, the Coordinator may resume the M5 branch so Generator can validate, run tests, commit, push, and open the review PR. Raster images are preferred; SVG/procedural images are the approved fallback if a raster provider is unavailable.",
-    "nextAction": "Wait for Opus capacity to reset at 23:10 UTC, then run or allow the next scheduled Coordinator invocation. It should resume the current M5 worktree rather than reset or stash it."
+    "headline": "M5: ESCALATED",
+    "whereWeAre": "M5 stopped without an approved result: generator subprocess failed twice in a row for milestone M5, run 1. Last output: You've hit your session limit \u00b7 resets 11:10pm (UTC)",
+    "whereWeGo": "Resolve the recorded blocker or adjust the harness/process. Automatic role/verdict retries are enabled, but this safety escalation remains blocked until its recorded precondition is resolved.",
+    "nextAction": "Review team/game-night-v1/escalation/20260825-213953_escalation-M5-run1.md, make the necessary evidence-backed change, then allow the next scheduled coordinator run to resume."
   },
   "milestones": [
     {
@@ -266,6 +266,14 @@
       "status": "escalated",
       "title": "M5: ESCALATED \u2014 TRANSIENT PROVIDER LIMIT",
       "detail": "M5 Generator produced partial, uncommitted work on the active M5 branch (`newspaper/`, newspaper content/tests, and image/config preparation), then hit the Opus session limit twice. The work remains preserved for the next Generator resumption; no deliverable code was manually committed or discarded."
+    },
+    {
+      "fingerprint": "2026-08-25T21:39:56Z|M5|ESCALATED",
+      "time": "2026-08-25T21:39:56Z",
+      "milestone": "M5",
+      "status": "escalated",
+      "title": "M5: ESCALATED",
+      "detail": "M5 stopped without an approved result: generator subprocess failed twice in a row for milestone M5, run 1. Last output: You've hit your session limit \u00b7 resets 11:10pm (UTC)"
     }
   ],
   "harnessEvolution": [
@@ -281,7 +289,7 @@
     {
       "kind": "Blocking issue",
       "status": "open",
-      "text": "M5 Generator produced partial, uncommitted work on the active M5 branch (`newspaper/`, newspaper content/tests, and image/config preparation), then hit the Opus session limit twice. The work remains preserved for the next Generator resumption; no deliverable code was manually committed or discarded."
+      "text": "M5 stopped without an approved result: generator subprocess failed twice in a row for milestone M5, run 1. Last output: You've hit your session limit \u00b7 resets 11:10pm (UTC)"
     }
   ]
 }
