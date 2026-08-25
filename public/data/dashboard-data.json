@@ -5,7 +5,7 @@
     "workspace": "team/game-night-v1",
     "harnessRepo": "https://github.com/badralbudur/game-night-harness",
     "deliverableRepo": "https://github.com/badralbudur/game-night",
-    "lastUpdated": "2026-08-24T19:59:01Z"
+    "lastUpdated": "2026-08-25T04:00:26Z"
   },
   "overview": {
     "currentMilestone": "M5",
@@ -21,10 +21,10 @@
     "workspaceStatus": "Needs operator review"
   },
   "checkpoint": {
-    "headline": "M5: ESCALATED",
-    "whereWeAre": "M5 stopped without an approved result: generator subprocess failed twice in a row for milestone M5, run 1. Last output: You've hit your session limit \u00b7 resets 9:10pm (UTC)",
-    "whereWeGo": "Resolve the recorded blocker or adjust the harness/process. Automatic role/verdict retries are enabled, but this safety escalation remains blocked until its recorded precondition is resolved.",
-    "nextAction": "Review team/game-night-v1/escalation/20260824-195859_escalation-M5-run1.md, make the necessary evidence-backed change, then allow the next scheduled coordinator run to resume."
+    "headline": "M5: ESCALATED \u2014 BLOCKED",
+    "whereWeAre": "M5 remains blocked by the open escalation: generator subprocess failed twice in a row for milestone M5, run 1. Last output:",
+    "whereWeGo": "The coordinator correctly made no destructive changes and will resume only after the recorded blocker is resolved.",
+    "nextAction": "Review team/game-night-v1/escalation/.latest.md and its referenced escalation evidence, resolve the precondition, then allow the next scheduled coordinator run to resume."
   },
   "milestones": [
     {
@@ -250,6 +250,14 @@
       "status": "escalated",
       "title": "M5: ESCALATED",
       "detail": "M5 stopped without an approved result: generator subprocess failed twice in a row for milestone M5, run 1. Last output: You've hit your session limit \u00b7 resets 9:10pm (UTC)"
+    },
+    {
+      "fingerprint": "2026-08-25T04:00:26Z|M5|ESCALATED \u2014 BLOCKED",
+      "time": "2026-08-25T04:00:26Z",
+      "milestone": "M5",
+      "status": "escalated",
+      "title": "M5: ESCALATED \u2014 BLOCKED",
+      "detail": "M5 remains blocked by the open escalation: generator subprocess failed twice in a row for milestone M5, run 1. Last output:"
     }
   ],
   "harnessEvolution": [
@@ -270,7 +278,7 @@
     {
       "kind": "Blocking issue",
       "status": "open",
-      "text": "M5 stopped without an approved result: generator subprocess failed twice in a row for milestone M5, run 1. Last output: You've hit your session limit \u00b7 resets 9:10pm (UTC)"
+      "text": "M5 remains blocked by the open escalation: generator subprocess failed twice in a row for milestone M5, run 1. Last output:"
     }
   ]
 }
