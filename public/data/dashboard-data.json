@@ -271,11 +271,6 @@
   ],
   "openItems": [
     {
-      "kind": "Spec decision",
-      "status": "open",
-      "text": "Image-generation modality: does a game-state-informed procedural/SVG image satisfy the per-edition/per-city image requirement, or must a raster image provider be configured?"
-    },
-    {
       "kind": "Blocking issue",
       "status": "open",
       "text": "M5 remains blocked by the open escalation: generator subprocess failed twice in a row for milestone M5, run 1. Last output:"
