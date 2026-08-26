@@ -5,26 +5,27 @@
     "workspace": "team/game-night-v1",
     "harnessRepo": "https://github.com/badralbudur/game-night-harness",
     "deliverableRepo": "https://github.com/badralbudur/game-night",
-    "lastUpdated": "2026-08-25T21:39:56Z"
+    "lastUpdated": "2026-08-26T22:23:20Z"
   },
   "overview": {
-    "currentMilestone": "M5",
-    "currentMilestoneTitle": "Newspaper generation & publication",
+    "currentMilestone": "M6",
+    "currentMilestoneTitle": "Endgame content",
     "completedMilestones": [
       "M1",
       "M2",
       "M3",
-      "M4"
+      "M4",
+      "M5"
     ],
     "totalMilestones": 7,
     "retryMode": "Automatic \u2014 bounded retries enabled",
-    "workspaceStatus": "Needs operator review"
+    "workspaceStatus": "Ready for next manual run"
   },
   "checkpoint": {
-    "headline": "M5: ESCALATED",
-    "whereWeAre": "M5 stopped without an approved result: generator subprocess failed twice in a row for milestone M5, run 1. Last output: You've hit your session limit \u00b7 resets 11:10pm (UTC)",
-    "whereWeGo": "Resolve the recorded blocker or adjust the harness/process. Automatic role/verdict retries are enabled, but this safety escalation remains blocked until its recorded precondition is resolved.",
-    "nextAction": "Review team/game-night-v1/escalation/20260825-213953_escalation-M5-run1.md, make the necessary evidence-backed change, then allow the next scheduled coordinator run to resume."
+    "headline": "M5: PASS",
+    "whereWeAre": "M5 passed independent evaluation and its approved PR merged into main.",
+    "whereWeGo": "The harness now moves to M6: Newspaper publication & archive.",
+    "nextAction": "Create/resume the M6 review branch and run one explicit manual Generator \u2192 Evaluator attempt."
   },
   "milestones": [
     {
@@ -54,13 +55,13 @@
     {
       "id": "M5",
       "title": "Newspaper generation & publication",
-      "status": "current",
+      "status": "passed",
       "detail": "Private archive, prose, identity redaction and edition images."
     },
     {
       "id": "M6",
       "title": "Endgame content",
-      "status": "queued",
+      "status": "current",
       "detail": "Winner, twist article and city portraits/excess."
     },
     {
@@ -274,6 +275,14 @@
       "status": "escalated",
       "title": "M5: ESCALATED",
       "detail": "M5 stopped without an approved result: generator subprocess failed twice in a row for milestone M5, run 1. Last output: You've hit your session limit \u00b7 resets 11:10pm (UTC)"
+    },
+    {
+      "fingerprint": "2026-08-26T22:23:20Z|M5|PASS",
+      "time": "2026-08-26T22:23:20Z",
+      "milestone": "M5",
+      "status": "passed",
+      "title": "M5: PASS",
+      "detail": "M5 passed independent evaluation and its approved PR merged into main."
     }
   ],
   "harnessEvolution": [
@@ -287,9 +296,9 @@
   ],
   "openItems": [
     {
-      "kind": "Blocking issue",
-      "status": "open",
-      "text": "M5 stopped without an approved result: generator subprocess failed twice in a row for milestone M5, run 1. Last output: You've hit your session limit \u00b7 resets 11:10pm (UTC)"
+      "kind": "Current work",
+      "status": "ready",
+      "text": "Create/resume the M6 review branch and run one explicit manual Generator \u2192 Evaluator attempt."
     }
   ]
 }
