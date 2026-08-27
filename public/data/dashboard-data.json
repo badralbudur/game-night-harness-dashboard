@@ -9,7 +9,7 @@
   },
   "overview": {
     "currentMilestone": "M6",
-    "currentMilestoneTitle": "Endgame content",
+    "currentMilestoneTitle": "Newspaper publication & archive",
     "completedMilestones": [
       "M1",
       "M2",
@@ -17,7 +17,7 @@
       "M4",
       "M5"
     ],
-    "totalMilestones": 7,
+    "totalMilestones": 8,
     "retryMode": "Automatic \u2014 bounded retries enabled",
     "workspaceStatus": "Ready for next manual run"
   },
@@ -60,12 +60,18 @@
     },
     {
       "id": "M6",
-      "title": "Endgame content",
+      "title": "Newspaper publication & archive",
       "status": "current",
-      "detail": "Winner, twist article and city portraits/excess."
+      "detail": "Private stable edition URL, prior-edition archive and isolated public manifest."
     },
     {
       "id": "M7",
+      "title": "Endgame content",
+      "status": "queued",
+      "detail": "Winner, twist article and city portraits/excess."
+    },
+    {
+      "id": "M8",
       "title": "Full integration & regression",
       "status": "queued",
       "detail": "Complete simulated game and full-spec validation."
