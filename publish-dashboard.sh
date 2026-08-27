@@ -18,7 +18,8 @@ fi
 
 "$UVX_BIN" fulcra-api file download "team/${TEAM_NAME}/status-summary.md" "$TMP/status-summary.md" >/dev/null
 "$UVX_BIN" fulcra-api file download "team/${TEAM_NAME}/milestone-progress.md" "$TMP/milestone-progress.md" >/dev/null || : > "$TMP/milestone-progress.md"
-python3 "$ROOT/refresh_dashboard.py" "$TMP/status-summary.md" "$TMP/milestone-progress.md"
+"$UVX_BIN" fulcra-api file download "team/${TEAM_NAME}/decision/.latest.md" "$TMP/latest-decision.md" >/dev/null 2>&1 || : > "$TMP/latest-decision.md"
+python3 "$ROOT/refresh_dashboard.py" "$TMP/status-summary.md" "$TMP/milestone-progress.md" "$TMP/latest-decision.md"
 
 mkdir -p "$ROOT/public/data"
 cp "$ROOT/index.html" "$ROOT/app.js" "$ROOT/styles.css" "$ROOT/public/"

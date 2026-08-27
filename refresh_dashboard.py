@@ -29,13 +29,15 @@ def metadata(markdown: str, label: str) -> str:
 
 
 def main() -> int:
-    if len(sys.argv) != 3:
-        print("usage: refresh_dashboard.py <status-summary.md> <milestone-progress.md>", file=sys.stderr)
+    if len(sys.argv) not in (3, 4):
+        print("usage: refresh_dashboard.py <status-summary.md> <milestone-progress.md> [latest-decision.md]", file=sys.stderr)
         return 2
-    status_path, progress_path = map(Path, sys.argv[1:])
+    status_path, progress_path = map(Path, sys.argv[1:3])
+    decision_path = Path(sys.argv[3]) if len(sys.argv) == 4 else None
     data = json.loads(DATA.read_text())
     status = status_path.read_text() if status_path.exists() else ""
     progress = progress_path.read_text() if progress_path.exists() else ""
+    decision = decision_path.read_text() if decision_path and decision_path.exists() else ""
 
     current = re.search(r"^current:\s*(.+)$", progress, re.M)
     completed = re.search(r"^completed:\s*(.*)$", progress, re.M)
@@ -83,16 +85,19 @@ def main() -> int:
         data["overview"]["retryMode"] = "Manual — automatic retries disabled"
 
     # Open Items is a live operations panel, not a static project brief.
-    # Preserve explicit long-lived spec decisions, then replace stale
-    # next-action text with the durable status summary's current blocker
-    # or next bearing on every publish.
+    # Decision pointers contain a concise Coordinator-extracted question;
+    # use that instead of the generic status fallback when available.
     long_lived = [item for item in data.get("openItems", []) if item.get("kind") == "Spec decision"]
-    if "ESCALATED" in outcome or "DECISION" in outcome:
+    decision_question = re.search(r"^question:\s*(.+)$", decision, re.M)
+    if "DECISION" in outcome and decision_question:
+        live_item = {"kind": "Decision required", "status": "open", "text": decision_question.group(1).strip()}
+    elif "ESCALATED" in outcome or "DECISION" in outcome:
         live_item = {"kind": "Blocking issue" if "ESCALATED" in outcome else "Decision required", "status": "open", "text": where}
     else:
         live_item = {"kind": "Current work", "status": "ready", "text": next_action}
     data["openItems"] = long_lived + [live_item]
 
+    run_status = "decision" if "DECISION" in outcome else "escalated" if "ESCALATED" in outcome else "passed"
     fingerprint = f"{updated}|{milestone}|{outcome}"
     known = {run.get("fingerprint") for run in data.get("runs", [])}
     if fingerprint not in known:
@@ -100,10 +105,18 @@ def main() -> int:
             "fingerprint": fingerprint,
             "time": updated,
             "milestone": milestone,
-            "status": "escalated" if "ESCALATED" in outcome else "passed",
+            "status": run_status,
             "title": f"{milestone}: {outcome}",
             "detail": where,
         })
+    else:
+        # Reclassify old rendered events when dashboard semantics improve
+        # (e.g. a decision-required run was previously colored as PASS).
+        for run in data["runs"]:
+            if run.get("fingerprint") == fingerprint:
+                run["status"] = run_status
+                run["detail"] = where
+                break
 
     DATA.write_text(json.dumps(data, indent=2) + "\n")
     print(f"refreshed curated dashboard state: {milestone} / {outcome}")
