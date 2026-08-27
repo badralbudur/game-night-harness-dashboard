@@ -5,28 +5,29 @@
     "workspace": "team/game-night-v1",
     "harnessRepo": "https://github.com/badralbudur/game-night-harness",
     "deliverableRepo": "https://github.com/badralbudur/game-night",
-    "lastUpdated": "2026-08-27T12:20:00Z"
+    "lastUpdated": "2026-08-27T17:07:44Z"
   },
   "overview": {
-    "currentMilestone": "M7",
-    "currentMilestoneTitle": "Endgame content",
+    "currentMilestone": "M8",
+    "currentMilestoneTitle": "Full integration & regression",
     "completedMilestones": [
       "M1",
       "M2",
       "M3",
       "M4",
       "M5",
-      "M6"
+      "M6",
+      "M7"
     ],
     "totalMilestones": 8,
     "retryMode": "Automatic \u2014 bounded retries enabled",
     "workspaceStatus": "Ready for next scheduled run"
   },
   "checkpoint": {
-    "headline": "M7: DECISION RESOLVED \u2014 READY",
-    "whereWeAre": "The user resolved the #32/#21 conflict. M7 may show declined imports as excess in importing cities, while preserving non-winning export anonymity. The existing M7 branch remains reviewable and ready for Generator to align with this approved target.",
-    "whereWeGo": "Generator must add fun/colorful production scenes in winning exporter cities, validate the resolved endgame policy, commit/push the M7 branch, then let Evaluator re-grade it.",
-    "nextAction": "Resume M7 on the existing milestone branch. Merge PR #7 only after a new independent PASS with the resolved privacy/excess/production policy."
+    "headline": "M7: PASS",
+    "whereWeAre": "M7 passed independent evaluation and its approved PR merged into main.",
+    "whereWeGo": "The harness now moves to M8: Full-spec integration & regression pass.",
+    "nextAction": "Create/resume the M8 review branch; the next scheduled Coordinator invocation will run its Generator \u2192 Evaluator attempt."
   },
   "milestones": [
     {
@@ -68,13 +69,13 @@
     {
       "id": "M7",
       "title": "Endgame content",
-      "status": "current",
+      "status": "passed",
       "detail": "Winner, twist article and city portraits/excess."
     },
     {
       "id": "M8",
       "title": "Full integration & regression",
-      "status": "queued",
+      "status": "current",
       "detail": "Complete simulated game and full-spec validation."
     }
   ],
@@ -338,6 +339,14 @@
       "status": "decision",
       "title": "M7: DECISION RESOLVED \u2014 READY",
       "detail": "The user resolved the #32/#21 conflict. M7 may show declined imports as excess in importing cities, while preserving non-winning export anonymity. The existing M7 branch remains reviewable and ready for Generator to align with this approved target."
+    },
+    {
+      "fingerprint": "2026-08-27T17:07:44Z|M7|PASS",
+      "time": "2026-08-27T17:07:44Z",
+      "milestone": "M7",
+      "status": "passed",
+      "title": "M7: PASS",
+      "detail": "M7 passed independent evaluation and its approved PR merged into main."
     }
   ],
   "harnessEvolution": [
@@ -351,9 +360,9 @@
   ],
   "openItems": [
     {
-      "kind": "Decision required",
-      "status": "open",
-      "text": "The user resolved the #32/#21 conflict. M7 may show declined imports as excess in importing cities, while preserving non-winning export anonymity. The existing M7 branch remains reviewable and ready for Generator to align with this approved target."
+      "kind": "Current work",
+      "status": "ready",
+      "text": "Create/resume the M8 review branch; the next scheduled Coordinator invocation will run its Generator \u2192 Evaluator attempt."
     }
   ]
 }
