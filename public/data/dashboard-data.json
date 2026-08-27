@@ -5,7 +5,7 @@
     "workspace": "team/game-night-v1",
     "harnessRepo": "https://github.com/badralbudur/game-night-harness",
     "deliverableRepo": "https://github.com/badralbudur/game-night",
-    "lastUpdated": "2026-08-27T04:55:42Z"
+    "lastUpdated": "2026-08-27T06:32:11Z"
   },
   "overview": {
     "currentMilestone": "M7",
@@ -20,13 +20,13 @@
     ],
     "totalMilestones": 8,
     "retryMode": "Automatic \u2014 bounded retries enabled",
-    "workspaceStatus": "Ready for next scheduled run"
+    "workspaceStatus": "Needs operator review"
   },
   "checkpoint": {
-    "headline": "M6: PASS",
-    "whereWeAre": "M6 passed independent evaluation and its approved PR merged into main.",
-    "whereWeGo": "The harness now moves to M7: Endgame content.",
-    "nextAction": "Create/resume the M7 review branch; the next scheduled Coordinator invocation will run its Generator \u2192 Evaluator attempt."
+    "headline": "M7: ESCALATED",
+    "whereWeAre": "M7 stopped without an approved result: generator subprocess failed twice in a row for milestone M7, run 1. Last output: You've hit your session limit \u00b7 resets 9:20am (UTC)",
+    "whereWeGo": "Resolve the recorded blocker or adjust the harness/process. Automatic role/verdict retries are enabled, but this safety escalation remains blocked until its recorded precondition is resolved.",
+    "nextAction": "Review team/game-night-v1/escalation/20260827-063208_escalation-M7-run1.md, make the necessary evidence-backed change, then allow the next scheduled coordinator run to resume."
   },
   "milestones": [
     {
@@ -306,6 +306,14 @@
       "status": "passed",
       "title": "M6: PASS",
       "detail": "M6 passed independent evaluation and its approved PR merged into main."
+    },
+    {
+      "fingerprint": "2026-08-27T06:32:11Z|M7|ESCALATED",
+      "time": "2026-08-27T06:32:11Z",
+      "milestone": "M7",
+      "status": "escalated",
+      "title": "M7: ESCALATED",
+      "detail": "M7 stopped without an approved result: generator subprocess failed twice in a row for milestone M7, run 1. Last output: You've hit your session limit \u00b7 resets 9:20am (UTC)"
     }
   ],
   "harnessEvolution": [
@@ -319,9 +327,9 @@
   ],
   "openItems": [
     {
-      "kind": "Current work",
-      "status": "ready",
-      "text": "Create/resume the M7 review branch; the next scheduled Coordinator invocation will run its Generator \u2192 Evaluator attempt."
+      "kind": "Blocking issue",
+      "status": "open",
+      "text": "M7 stopped without an approved result: generator subprocess failed twice in a row for milestone M7, run 1. Last output: You've hit your session limit \u00b7 resets 9:20am (UTC)"
     }
   ]
 }
