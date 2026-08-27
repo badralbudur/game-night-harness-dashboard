@@ -119,11 +119,24 @@ and content) produces a real published edition, reachable at a stable
 URL, with a prior-edition archive link, correct identity redaction, and
 passes the Evaluator's judged tone check.
 
-## M6: Endgame content
+## M6: Newspaper publication & archive
 
-**Scope:** crowning the cumulative-profit winner, the tongue-in-cheek
-twist article, and per-city descriptions/images built from actual game
-history with non-chosen exports framed as "excess" (#31, #32).
+**Scope:** take M5's rendered editions and publish them to a fixed,
+non-publicly-discoverable URL; preserve browseable prior-edition archive;
+verify the isolated public manifest and delivery privacy rules.
+
+**Target spec requirements:** #26, #27.
+
+**Done when:** a M5-rendered edition is reachable at a stable URL, its
+archive exposes at least one prior edition without overwriting it, and the
+Evaluator verifies that only intentionally curated public files are
+published (no inboxes, raw verdicts, credentials, or private repo data).
+
+## M7: Endgame content
+
+**Scope:** crown the cumulative-profit winner, the tongue-in-cheek twist
+article, and per-city descriptions/images built from actual game history
+with non-chosen exports framed as "excess" (#31, #32).
 
 **Target spec requirements:** #31, #32.
 
@@ -131,9 +144,9 @@ history with non-chosen exports framed as "excess" (#31, #32).
 its end condition and produces all three endgame artifacts, passing the
 Evaluator's judged quality checks.
 
-## M7: Full-spec integration & regression pass
+## M8: Full-spec integration & regression pass
 
-**Scope:** no new features — wire M1-M6 together end to end, run a
+**Scope:** no new features — wire M1-M7 together end to end, run a
 complete simulated game with real spawned simulated players (varying
 engagement levels, per spec's Generation Rules) rather than milestone-
 scoped unit tests, and confirm every spec requirement (#1-#35) holds
