@@ -5,7 +5,7 @@
     "workspace": "team/game-night-v1",
     "harnessRepo": "https://github.com/badralbudur/game-night-harness",
     "deliverableRepo": "https://github.com/badralbudur/game-night",
-    "lastUpdated": "2026-08-27T12:11:19Z"
+    "lastUpdated": "2026-08-27T12:20:00Z"
   },
   "overview": {
     "currentMilestone": "M7",
@@ -23,10 +23,10 @@
     "workspaceStatus": "Ready for next scheduled run"
   },
   "checkpoint": {
-    "headline": "M7: DECISION REQUIRED \u2014 BLOCKED",
-    "whereWeAre": "M7 remains paused for the user-only decision: Resolve the #32 vs #21 conflict: choose whether M7 may retain declined imports as excess, or direct a #21-safe literal-own-export resolution..",
-    "whereWeGo": "No role will be re-invoked until the user answer is recorded in decisions.md and an approved spec/config revision changes the spec reference.",
-    "nextAction": "Review team/game-night-v1/decision/20260827-113312_M7-evaluator-decision.md and answer the one question through the configured origin channel."
+    "headline": "M7: DECISION RESOLVED \u2014 READY",
+    "whereWeAre": "The user resolved the #32/#21 conflict. M7 may show declined imports as excess in importing cities, while preserving non-winning export anonymity. The existing M7 branch remains reviewable and ready for Generator to align with this approved target.",
+    "whereWeGo": "Generator must add fun/colorful production scenes in winning exporter cities, validate the resolved endgame policy, commit/push the M7 branch, then let Evaluator re-grade it.",
+    "nextAction": "Resume M7 on the existing milestone branch. Merge PR #7 only after a new independent PASS with the resolved privacy/excess/production policy."
   },
   "milestones": [
     {
@@ -330,6 +330,14 @@
       "status": "decision",
       "title": "M7: DECISION REQUIRED \u2014 BLOCKED",
       "detail": "M7 remains paused for the user-only decision: Resolve the #32 vs #21 conflict: choose whether M7 may retain declined imports as excess, or direct a #21-safe literal-own-export resolution.."
+    },
+    {
+      "fingerprint": "2026-08-27T12:20:00Z|M7|DECISION RESOLVED \u2014 READY",
+      "time": "2026-08-27T12:20:00Z",
+      "milestone": "M7",
+      "status": "decision",
+      "title": "M7: DECISION RESOLVED \u2014 READY",
+      "detail": "The user resolved the #32/#21 conflict. M7 may show declined imports as excess in importing cities, while preserving non-winning export anonymity. The existing M7 branch remains reviewable and ready for Generator to align with this approved target."
     }
   ],
   "harnessEvolution": [
@@ -345,7 +353,7 @@
     {
       "kind": "Decision required",
       "status": "open",
-      "text": "Resolve #32 vs #21: should city portraits use declined imports as excess, or use only an aggregate/non-identifying representation of each city's own unchosen exports?"
+      "text": "The user resolved the #32/#21 conflict. M7 may show declined imports as excess in importing cities, while preserving non-winning export anonymity. The existing M7 branch remains reviewable and ready for Generator to align with this approved target."
     }
   ]
 }
