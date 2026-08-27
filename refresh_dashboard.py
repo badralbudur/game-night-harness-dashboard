@@ -76,7 +76,7 @@ def main() -> int:
         "nextAction": next_action,
     }
     data["project"]["lastUpdated"] = updated
-    data["overview"]["workspaceStatus"] = "Needs operator review" if "ESCALATED" in outcome else "Ready for next manual run"
+    data["overview"]["workspaceStatus"] = "Needs operator review" if "ESCALATED" in outcome else "Ready for next scheduled run" if retry_mode == "automatic-enabled" else "Ready for next manual run"
     if retry_mode == "automatic-enabled":
         data["overview"]["retryMode"] = "Automatic — bounded retries enabled"
     elif retry_mode == "manual":
