@@ -5,7 +5,7 @@
     "workspace": "team/game-night-v1",
     "harnessRepo": "https://github.com/badralbudur/game-night-harness",
     "deliverableRepo": "https://github.com/badralbudur/game-night",
-    "lastUpdated": "2026-08-27T06:32:11Z"
+    "lastUpdated": "2026-08-27T11:33:14Z"
   },
   "overview": {
     "currentMilestone": "M7",
@@ -20,13 +20,13 @@
     ],
     "totalMilestones": 8,
     "retryMode": "Automatic \u2014 bounded retries enabled",
-    "workspaceStatus": "Needs operator review"
+    "workspaceStatus": "Ready for next scheduled run"
   },
   "checkpoint": {
-    "headline": "M7: ESCALATED",
-    "whereWeAre": "M7 stopped without an approved result: generator subprocess failed twice in a row for milestone M7, run 1. Last output: You've hit your session limit \u00b7 resets 9:20am (UTC)",
-    "whereWeGo": "Resolve the recorded blocker or adjust the harness/process. Automatic role/verdict retries are enabled, but this safety escalation remains blocked until its recorded precondition is resolved.",
-    "nextAction": "Review team/game-night-v1/escalation/20260827-063208_escalation-M7-run1.md, make the necessary evidence-backed change, then allow the next scheduled coordinator run to resume."
+    "headline": "M7: DECISION REQUIRED",
+    "whereWeAre": "M7 requires a user-only decision from evaluator: User decision required; see the durable decision request evidence.",
+    "whereWeGo": "The harness is paused at this milestone; a user answer must be recorded in decisions.md and reflected in an approved spec/config revision before it resumes.",
+    "nextAction": "Review team/game-night-v1/decision/20260827-113312_M7-evaluator-decision.md and answer the one question through the configured origin channel."
   },
   "milestones": [
     {
@@ -314,6 +314,14 @@
       "status": "escalated",
       "title": "M7: ESCALATED",
       "detail": "M7 stopped without an approved result: generator subprocess failed twice in a row for milestone M7, run 1. Last output: You've hit your session limit \u00b7 resets 9:20am (UTC)"
+    },
+    {
+      "fingerprint": "2026-08-27T11:33:14Z|M7|DECISION REQUIRED",
+      "time": "2026-08-27T11:33:14Z",
+      "milestone": "M7",
+      "status": "passed",
+      "title": "M7: DECISION REQUIRED",
+      "detail": "M7 requires a user-only decision from evaluator: User decision required; see the durable decision request evidence."
     }
   ],
   "harnessEvolution": [
@@ -327,9 +335,9 @@
   ],
   "openItems": [
     {
-      "kind": "Blocking issue",
+      "kind": "Decision required",
       "status": "open",
-      "text": "M7 stopped without an approved result: generator subprocess failed twice in a row for milestone M7, run 1. Last output: You've hit your session limit \u00b7 resets 9:20am (UTC)"
+      "text": "M7 requires a user-only decision from evaluator: User decision required; see the durable decision request evidence."
     }
   ]
 }
