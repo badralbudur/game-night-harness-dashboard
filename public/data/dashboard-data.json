@@ -5,7 +5,7 @@
     "workspace": "team/game-night-v1",
     "harnessRepo": "https://github.com/badralbudur/game-night-harness",
     "deliverableRepo": "https://github.com/badralbudur/game-night",
-    "lastUpdated": "2026-08-27T11:33:14Z"
+    "lastUpdated": "2026-08-27T12:11:19Z"
   },
   "overview": {
     "currentMilestone": "M7",
@@ -23,9 +23,9 @@
     "workspaceStatus": "Ready for next scheduled run"
   },
   "checkpoint": {
-    "headline": "M7: DECISION REQUIRED",
-    "whereWeAre": "M7 requires a user-only decision from evaluator: User decision required; see the durable decision request evidence.",
-    "whereWeGo": "The harness is paused at this milestone; a user answer must be recorded in decisions.md and reflected in an approved spec/config revision before it resumes.",
+    "headline": "M7: DECISION REQUIRED \u2014 BLOCKED",
+    "whereWeAre": "M7 remains paused for the user-only decision: Resolve the #32 vs #21 conflict: choose whether M7 may retain declined imports as excess, or direct a #21-safe literal-own-export resolution..",
+    "whereWeGo": "No role will be re-invoked until the user answer is recorded in decisions.md and an approved spec/config revision changes the spec reference.",
     "nextAction": "Review team/game-night-v1/decision/20260827-113312_M7-evaluator-decision.md and answer the one question through the configured origin channel."
   },
   "milestones": [
@@ -322,6 +322,14 @@
       "status": "passed",
       "title": "M7: DECISION REQUIRED",
       "detail": "M7 requires a user-only decision from evaluator: User decision required; see the durable decision request evidence."
+    },
+    {
+      "fingerprint": "2026-08-27T12:11:19Z|M7|DECISION REQUIRED \u2014 BLOCKED",
+      "time": "2026-08-27T12:11:19Z",
+      "milestone": "M7",
+      "status": "decision",
+      "title": "M7: DECISION REQUIRED \u2014 BLOCKED",
+      "detail": "M7 remains paused for the user-only decision: Resolve the #32 vs #21 conflict: choose whether M7 may retain declined imports as excess, or direct a #21-safe literal-own-export resolution.."
     }
   ],
   "harnessEvolution": [
@@ -337,7 +345,7 @@
     {
       "kind": "Decision required",
       "status": "open",
-      "text": "M7 requires a user-only decision from evaluator: User decision required; see the durable decision request evidence."
+      "text": "Resolve #32 vs #21: should city portraits use declined imports as excess, or use only an aggregate/non-identifying representation of each city's own unchosen exports?"
     }
   ]
 }
