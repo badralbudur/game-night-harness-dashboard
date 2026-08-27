@@ -5,7 +5,7 @@
     "workspace": "team/game-night-v1",
     "harnessRepo": "https://github.com/badralbudur/game-night-harness",
     "deliverableRepo": "https://github.com/badralbudur/game-night",
-    "lastUpdated": "2026-08-26T22:23:20Z"
+    "lastUpdated": "2026-08-27T00:17:27Z"
   },
   "overview": {
     "currentMilestone": "M6",
@@ -25,7 +25,7 @@
     "headline": "M5: PASS",
     "whereWeAre": "M5 passed independent evaluation and its approved PR merged into main.",
     "whereWeGo": "The harness now moves to M6: Newspaper publication & archive.",
-    "nextAction": "Create/resume the M6 review branch and run one explicit manual Generator \u2192 Evaluator attempt."
+    "nextAction": "Create/resume the M6 review branch; the next scheduled Coordinator invocation will run its Generator \u2192 Evaluator attempt."
   },
   "milestones": [
     {
@@ -289,6 +289,14 @@
       "status": "passed",
       "title": "M5: PASS",
       "detail": "M5 passed independent evaluation and its approved PR merged into main."
+    },
+    {
+      "fingerprint": "2026-08-27T00:17:27Z|M5|PASS",
+      "time": "2026-08-27T00:17:27Z",
+      "milestone": "M5",
+      "status": "passed",
+      "title": "M5: PASS",
+      "detail": "M5 passed independent evaluation and its approved PR merged into main."
     }
   ],
   "harnessEvolution": [
@@ -304,7 +312,7 @@
     {
       "kind": "Current work",
       "status": "ready",
-      "text": "Create/resume the M6 review branch and run one explicit manual Generator \u2192 Evaluator attempt."
+      "text": "Create/resume the M6 review branch; the next scheduled Coordinator invocation will run its Generator \u2192 Evaluator attempt."
     }
   ]
 }
