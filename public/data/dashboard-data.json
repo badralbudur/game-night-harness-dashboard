@@ -5,7 +5,7 @@
     "workspace": "team/game-night-v1",
     "harnessRepo": "https://github.com/badralbudur/game-night-harness",
     "deliverableRepo": "https://github.com/badralbudur/game-night",
-    "lastUpdated": "2026-08-27T17:07:44Z"
+    "lastUpdated": "2026-08-27T17:54:18Z"
   },
   "overview": {
     "currentMilestone": "M8",
@@ -21,13 +21,13 @@
     ],
     "totalMilestones": 8,
     "retryMode": "Automatic \u2014 bounded retries enabled",
-    "workspaceStatus": "Ready for next scheduled run"
+    "workspaceStatus": "Needs operator review"
   },
   "checkpoint": {
-    "headline": "M7: PASS",
-    "whereWeAre": "M7 passed independent evaluation and its approved PR merged into main.",
-    "whereWeGo": "The harness now moves to M8: Full-spec integration & regression pass.",
-    "nextAction": "Create/resume the M8 review branch; the next scheduled Coordinator invocation will run its Generator \u2192 Evaluator attempt."
+    "headline": "M8: ESCALATED",
+    "whereWeAre": "M8 stopped without an approved result: generator subprocess failed twice in a row for milestone M8, run 1. Last output: You've hit your session limit \u00b7 resets 10pm (UTC)",
+    "whereWeGo": "Resolve the recorded blocker or adjust the harness/process. Automatic role/verdict retries are enabled, but this safety escalation remains blocked until its recorded precondition is resolved.",
+    "nextAction": "Review team/game-night-v1/escalation/20260827-175415_escalation-M8-run1.md, make the necessary evidence-backed change, then allow the next scheduled coordinator run to resume."
   },
   "milestones": [
     {
@@ -347,6 +347,14 @@
       "status": "passed",
       "title": "M7: PASS",
       "detail": "M7 passed independent evaluation and its approved PR merged into main."
+    },
+    {
+      "fingerprint": "2026-08-27T17:54:18Z|M8|ESCALATED",
+      "time": "2026-08-27T17:54:18Z",
+      "milestone": "M8",
+      "status": "escalated",
+      "title": "M8: ESCALATED",
+      "detail": "M8 stopped without an approved result: generator subprocess failed twice in a row for milestone M8, run 1. Last output: You've hit your session limit \u00b7 resets 10pm (UTC)"
     }
   ],
   "harnessEvolution": [
@@ -360,9 +368,9 @@
   ],
   "openItems": [
     {
-      "kind": "Current work",
-      "status": "ready",
-      "text": "Create/resume the M8 review branch; the next scheduled Coordinator invocation will run its Generator \u2192 Evaluator attempt."
+      "kind": "Blocking issue",
+      "status": "open",
+      "text": "M8 stopped without an approved result: generator subprocess failed twice in a row for milestone M8, run 1. Last output: You've hit your session limit \u00b7 resets 10pm (UTC)"
     }
   ]
 }
