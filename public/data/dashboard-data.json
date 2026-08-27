@@ -19,7 +19,7 @@
     ],
     "totalMilestones": 8,
     "retryMode": "Automatic \u2014 bounded retries enabled",
-    "workspaceStatus": "Ready for next manual run"
+    "workspaceStatus": "Ready for next scheduled run"
   },
   "checkpoint": {
     "headline": "M5: PASS",
@@ -54,9 +54,9 @@
     },
     {
       "id": "M5",
-      "title": "Newspaper generation & publication",
+      "title": "Newspaper rendering core",
       "status": "passed",
-      "detail": "Private archive, prose, identity redaction and edition images."
+      "detail": "Prose, identity redaction, tone and game-state-informed edition images."
     },
     {
       "id": "M6",
