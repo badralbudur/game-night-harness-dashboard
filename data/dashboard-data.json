@@ -5,7 +5,7 @@
     "workspace": "team/game-night-v1",
     "harnessRepo": "https://github.com/badralbudur/game-night-harness",
     "deliverableRepo": "https://github.com/badralbudur/game-night",
-    "lastUpdated": "2026-08-27T17:54:18Z"
+    "lastUpdated": "2026-08-28T00:39:12Z"
   },
   "overview": {
     "currentMilestone": "M8",
@@ -17,17 +17,18 @@
       "M4",
       "M5",
       "M6",
-      "M7"
+      "M7",
+      "M8"
     ],
     "totalMilestones": 8,
     "retryMode": "Automatic \u2014 bounded retries enabled",
-    "workspaceStatus": "Needs operator review"
+    "workspaceStatus": "Ready for next scheduled run"
   },
   "checkpoint": {
-    "headline": "M8: ESCALATED",
-    "whereWeAre": "M8 stopped without an approved result: generator subprocess failed twice in a row for milestone M8, run 1. Last output: You've hit your session limit \u00b7 resets 10pm (UTC)",
-    "whereWeGo": "Resolve the recorded blocker or adjust the harness/process. Automatic role/verdict retries are enabled, but this safety escalation remains blocked until its recorded precondition is resolved.",
-    "nextAction": "Review team/game-night-v1/escalation/20260827-175415_escalation-M8-run1.md, make the necessary evidence-backed change, then allow the next scheduled coordinator run to resume."
+    "headline": "M8: PASS \u2014 ALL MILESTONES",
+    "whereWeAre": "M8 passed independent evaluation and its approved PR merged into main; all planned milestones are complete.",
+    "whereWeGo": "The harness has converged on the current spec version. Further work requires a user-approved spec or milestone change.",
+    "nextAction": "Review the full integration evidence and decide whether to begin real-player testing or revise the spec."
   },
   "milestones": [
     {
@@ -75,7 +76,7 @@
     {
       "id": "M8",
       "title": "Full integration & regression",
-      "status": "current",
+      "status": "passed",
       "detail": "Complete simulated game and full-spec validation."
     }
   ],
@@ -355,6 +356,14 @@
       "status": "escalated",
       "title": "M8: ESCALATED",
       "detail": "M8 stopped without an approved result: generator subprocess failed twice in a row for milestone M8, run 1. Last output: You've hit your session limit \u00b7 resets 10pm (UTC)"
+    },
+    {
+      "fingerprint": "2026-08-28T00:39:12Z|M8|PASS \u2014 ALL MILESTONES",
+      "time": "2026-08-28T00:39:12Z",
+      "milestone": "M8",
+      "status": "passed",
+      "title": "M8: PASS \u2014 ALL MILESTONES",
+      "detail": "M8 passed independent evaluation and its approved PR merged into main; all planned milestones are complete."
     }
   ],
   "harnessEvolution": [
@@ -368,9 +377,9 @@
   ],
   "openItems": [
     {
-      "kind": "Blocking issue",
-      "status": "open",
-      "text": "M8 stopped without an approved result: generator subprocess failed twice in a row for milestone M8, run 1. Last output: You've hit your session limit \u00b7 resets 10pm (UTC)"
+      "kind": "Current work",
+      "status": "ready",
+      "text": "Review the full integration evidence and decide whether to begin real-player testing or revise the spec."
     }
   ]
 }
