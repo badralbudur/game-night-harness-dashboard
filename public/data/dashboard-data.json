@@ -5,7 +5,7 @@
     "workspace": "team/game-night-v1",
     "harnessRepo": "https://github.com/badralbudur/game-night-harness",
     "deliverableRepo": "https://github.com/badralbudur/game-night",
-    "lastUpdated": "2026-08-31T00:44:33Z"
+    "lastUpdated": "2026-08-31T06:45:27Z"
   },
   "overview": {
     "currentMilestone": "M8",
@@ -392,6 +392,14 @@
     {
       "fingerprint": "2026-08-31T00:44:33Z|ALL|PASS \u2014 ALL MILESTONES",
       "time": "2026-08-31T00:44:33Z",
+      "milestone": "ALL",
+      "status": "passed",
+      "title": "ALL: PASS \u2014 ALL MILESTONES",
+      "detail": "All planned milestones are complete for the current spec; the coordinator correctly skipped role invocation."
+    },
+    {
+      "fingerprint": "2026-08-31T06:45:27Z|ALL|PASS \u2014 ALL MILESTONES",
+      "time": "2026-08-31T06:45:27Z",
       "milestone": "ALL",
       "status": "passed",
       "title": "ALL: PASS \u2014 ALL MILESTONES",
