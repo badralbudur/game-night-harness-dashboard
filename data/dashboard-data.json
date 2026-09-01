@@ -8,8 +8,8 @@
     "lastUpdated": "2026-09-01T00:55:18Z"
   },
   "overview": {
-    "currentMilestone": "M8",
-    "currentMilestoneTitle": "Full integration & regression",
+    "currentMilestone": "M9",
+    "currentMilestoneTitle": "Importer agency, actual trade & automatic editions",
     "completedMilestones": [
       "M1",
       "M2",
@@ -20,7 +20,7 @@
       "M7",
       "M8"
     ],
-    "totalMilestones": 8,
+    "totalMilestones": 9,
     "retryMode": "Automatic \u2014 bounded retries enabled",
     "workspaceStatus": "Needs operator review"
   },
@@ -78,6 +78,12 @@
       "title": "Full integration & regression",
       "status": "passed",
       "detail": "Complete simulated game and full-spec validation."
+    },
+    {
+      "id": "M9",
+      "title": "Importer agency, actual trade & automatic editions",
+      "status": "current",
+      "detail": "Mayor-selected goods/services orders, automatic redacted round editions and group notices."
     }
   ],
   "runs": [
