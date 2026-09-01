@@ -5,7 +5,7 @@
     "workspace": "team/game-night-v1",
     "harnessRepo": "https://github.com/badralbudur/game-night-harness",
     "deliverableRepo": "https://github.com/badralbudur/game-night",
-    "lastUpdated": "2026-08-31T12:46:24Z"
+    "lastUpdated": "2026-09-01T00:55:18Z"
   },
   "overview": {
     "currentMilestone": "M8",
@@ -22,13 +22,13 @@
     ],
     "totalMilestones": 8,
     "retryMode": "Automatic \u2014 bounded retries enabled",
-    "workspaceStatus": "Ready for next scheduled run"
+    "workspaceStatus": "Needs operator review"
   },
   "checkpoint": {
-    "headline": "ALL: PASS \u2014 ALL MILESTONES",
-    "whereWeAre": "All planned milestones are complete for the current spec; the coordinator correctly skipped role invocation.",
-    "whereWeGo": "The harness has converged on the current spec version. Further work requires a user-approved spec or milestone change.",
-    "nextAction": "Review the full integration evidence and decide whether to begin real-player testing or revise the spec."
+    "headline": "M9: ESCALATED",
+    "whereWeAre": "M9 stopped without an approved result: evaluator subprocess failed twice in a row for milestone M9, run 1. Last output: You've hit your session limit \u00b7 resets 4:40am (UTC)",
+    "whereWeGo": "Resolve the recorded blocker or adjust the harness/process. Automatic role/verdict retries are enabled, but this safety escalation remains blocked until its recorded precondition is resolved.",
+    "nextAction": "Review team/game-night-v1/escalation/20260901-005515_escalation-M9-run1.md, make the necessary evidence-backed change, then allow the next scheduled coordinator run to resume."
   },
   "milestones": [
     {
@@ -412,6 +412,14 @@
       "status": "passed",
       "title": "ALL: PASS \u2014 ALL MILESTONES",
       "detail": "All planned milestones are complete for the current spec; the coordinator correctly skipped role invocation."
+    },
+    {
+      "fingerprint": "2026-09-01T00:55:18Z|M9|ESCALATED",
+      "time": "2026-09-01T00:55:18Z",
+      "milestone": "M9",
+      "status": "escalated",
+      "title": "M9: ESCALATED",
+      "detail": "M9 stopped without an approved result: evaluator subprocess failed twice in a row for milestone M9, run 1. Last output: You've hit your session limit \u00b7 resets 4:40am (UTC)"
     }
   ],
   "harnessEvolution": [
@@ -425,9 +433,9 @@
   ],
   "openItems": [
     {
-      "kind": "Current work",
-      "status": "ready",
-      "text": "Review the full integration evidence and decide whether to begin real-player testing or revise the spec."
+      "kind": "Blocking issue",
+      "status": "open",
+      "text": "M9 stopped without an approved result: evaluator subprocess failed twice in a row for milestone M9, run 1. Last output: You've hit your session limit \u00b7 resets 4:40am (UTC)"
     }
   ]
 }
