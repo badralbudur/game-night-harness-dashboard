@@ -71,6 +71,18 @@ def main() -> int:
     where = section(status, "Where we are") or data["checkpoint"]["whereWeAre"]
     going = section(status, "Where we're going") or data["checkpoint"]["whereWeGo"]
     next_action = section(status, "Next bearing") or data["checkpoint"]["nextAction"]
+    # A terminal status can name a newly appended milestone before the
+    # workspace progress pointer advances (for example, an evaluator capacity
+    # escalation). The dashboard must show that live M9-style status rather
+    # than retaining the prior completed milestone as its headline context.
+    if milestone and not milestone.startswith("("):
+        data["overview"]["currentMilestone"] = milestone
+        for entry in data.get("milestones", []):
+            if entry.get("id") == milestone:
+                data["overview"]["currentMilestoneTitle"] = entry.get("title", milestone)
+                if entry.get("status") != "passed":
+                    entry["status"] = "current"
+                break
     data["checkpoint"] = {
         "headline": f"{milestone}: {outcome}",
         "whereWeAre": where,
