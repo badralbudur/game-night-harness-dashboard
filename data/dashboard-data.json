@@ -9,7 +9,7 @@
   },
   "overview": {
     "currentMilestone": "M10",
-    "currentMilestoneTitle": "Importer agency, actual trade & automatic editions",
+    "currentMilestoneTitle": "Milestone M10",
     "completedMilestones": [
       "M1",
       "M2",
@@ -22,7 +22,7 @@
       "M9",
       "M10"
     ],
-    "totalMilestones": 9,
+    "totalMilestones": 10,
     "retryMode": "Automatic \u2014 bounded retries enabled",
     "workspaceStatus": "Ready for next scheduled run"
   },
@@ -86,6 +86,12 @@
       "title": "Importer agency, actual trade & automatic editions",
       "status": "passed",
       "detail": "Mayor-selected goods/services orders, automatic redacted round editions and group notices."
+    },
+    {
+      "id": "M10",
+      "title": "Milestone M10",
+      "status": "passed",
+      "detail": "Completed; see the curated checkpoint for the latest outcome."
     }
   ],
   "runs": [
