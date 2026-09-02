@@ -5,7 +5,7 @@
     "workspace": "team/game-night-v1",
     "harnessRepo": "https://github.com/badralbudur/game-night-harness",
     "deliverableRepo": "https://github.com/badralbudur/game-night",
-    "lastUpdated": "2026-09-01T00:55:18Z"
+    "lastUpdated": "2026-09-02T05:11:06Z"
   },
   "overview": {
     "currentMilestone": "M9",
@@ -18,17 +18,18 @@
       "M5",
       "M6",
       "M7",
-      "M8"
+      "M8",
+      "M9"
     ],
     "totalMilestones": 9,
     "retryMode": "Automatic \u2014 bounded retries enabled",
-    "workspaceStatus": "Needs operator review"
+    "workspaceStatus": "Ready for next scheduled run"
   },
   "checkpoint": {
-    "headline": "M9: ESCALATED",
-    "whereWeAre": "M9 stopped without an approved result: evaluator subprocess failed twice in a row for milestone M9, run 1. Last output: You've hit your session limit \u00b7 resets 4:40am (UTC)",
-    "whereWeGo": "Resolve the recorded blocker or adjust the harness/process. Automatic role/verdict retries are enabled, but this safety escalation remains blocked until its recorded precondition is resolved.",
-    "nextAction": "Review team/game-night-v1/escalation/20260901-005515_escalation-M9-run1.md, make the necessary evidence-backed change, then allow the next scheduled coordinator run to resume."
+    "headline": "M9: PASS",
+    "whereWeAre": "M9 passed independent evaluation and its approved PR merged into main.",
+    "whereWeGo": "The harness now moves to M10: Newspaper reading experience and latest-edition navigation.",
+    "nextAction": "Create/resume the M10 review branch; the next scheduled Coordinator invocation will run its Generator \u2192 Evaluator attempt."
   },
   "milestones": [
     {
@@ -82,7 +83,7 @@
     {
       "id": "M9",
       "title": "Importer agency, actual trade & automatic editions",
-      "status": "current",
+      "status": "passed",
       "detail": "Mayor-selected goods/services orders, automatic redacted round editions and group notices."
     }
   ],
@@ -426,6 +427,14 @@
       "status": "escalated",
       "title": "M9: ESCALATED",
       "detail": "M9 stopped without an approved result: evaluator subprocess failed twice in a row for milestone M9, run 1. Last output: You've hit your session limit \u00b7 resets 4:40am (UTC)"
+    },
+    {
+      "fingerprint": "2026-09-02T05:11:06Z|M9|PASS",
+      "time": "2026-09-02T05:11:06Z",
+      "milestone": "M9",
+      "status": "passed",
+      "title": "M9: PASS",
+      "detail": "M9 passed independent evaluation and its approved PR merged into main."
     }
   ],
   "harnessEvolution": [
@@ -439,9 +448,9 @@
   ],
   "openItems": [
     {
-      "kind": "Blocking issue",
-      "status": "open",
-      "text": "M9 stopped without an approved result: evaluator subprocess failed twice in a row for milestone M9, run 1. Last output: You've hit your session limit \u00b7 resets 4:40am (UTC)"
+      "kind": "Current work",
+      "status": "ready",
+      "text": "Create/resume the M10 review branch; the next scheduled Coordinator invocation will run its Generator \u2192 Evaluator attempt."
     }
   ]
 }
