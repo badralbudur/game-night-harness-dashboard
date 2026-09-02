@@ -52,6 +52,25 @@ def main() -> int:
     if completed_ids:
         data["overview"]["completedMilestones"] = completed_ids
 
+    # Milestone plans can legitimately grow after this dashboard's seed data
+    # was written.  Do not let an appended, durable milestone inherit the
+    # previous milestone's title or make progress look impossible (10/9).
+    # Preserve the conservative generic label here: only the workspace's
+    # checkpoint is public input, and it does not carry a user-authored title.
+    known_ids = {entry.get("id") for entry in data.get("milestones", [])}
+    for milestone_id in completed_ids:
+        if milestone_id not in known_ids:
+            data.setdefault("milestones", []).append({
+                "id": milestone_id,
+                "title": f"Milestone {milestone_id}",
+                "status": "passed",
+                "detail": "Completed; see the curated checkpoint for the latest outcome.",
+            })
+            known_ids.add(milestone_id)
+    data["overview"]["totalMilestones"] = max(
+        len(data.get("milestones", [])), len(completed_ids)
+    )
+
     # Reconcile the visual flight plan from durable workspace progress on
     # every refresh. Previously the overview advanced but the individual
     # cards retained stale generator-time statuses (e.g. M2 looked current
@@ -77,6 +96,15 @@ def main() -> int:
     # than retaining the prior completed milestone as its headline context.
     if milestone and not milestone.startswith("("):
         data["overview"]["currentMilestone"] = milestone
+        if milestone not in known_ids:
+            data.setdefault("milestones", []).append({
+                "id": milestone,
+                "title": f"Milestone {milestone}",
+                "status": "current",
+                "detail": "Current milestone; see the curated checkpoint for the latest outcome.",
+            })
+            known_ids.add(milestone)
+            data["overview"]["totalMilestones"] = len(data["milestones"])
         for entry in data.get("milestones", []):
             if entry.get("id") == milestone:
                 data["overview"]["currentMilestoneTitle"] = entry.get("title", milestone)
