@@ -5,11 +5,11 @@
     "workspace": "team/game-night-v1",
     "harnessRepo": "https://github.com/badralbudur/game-night-harness",
     "deliverableRepo": "https://github.com/badralbudur/game-night",
-    "lastUpdated": "2026-09-02T22:06:17Z"
+    "lastUpdated": "2026-09-03T06:43:56Z"
   },
   "overview": {
-    "currentMilestone": "ALL",
-    "currentMilestoneTitle": "Milestone ALL",
+    "currentMilestone": "M11",
+    "currentMilestoneTitle": "Milestone M11",
     "completedMilestones": [
       "M1",
       "M2",
@@ -22,15 +22,15 @@
       "M9",
       "M10"
     ],
-    "totalMilestones": 11,
+    "totalMilestones": 12,
     "retryMode": "Automatic \u2014 bounded retries enabled",
-    "workspaceStatus": "Ready for next scheduled run"
+    "workspaceStatus": "Needs operator review"
   },
   "checkpoint": {
-    "headline": "ALL: PASS \u2014 ALL MILESTONES",
-    "whereWeAre": "All planned milestones are complete for the current spec; the coordinator correctly skipped role invocation.",
-    "whereWeGo": "The harness has converged on the current spec version. Further work requires a user-approved spec or milestone change.",
-    "nextAction": "Review the full integration evidence and decide whether to begin real-player testing or revise the spec."
+    "headline": "M11: ESCALATED",
+    "whereWeAre": "M11 stopped without an approved result: generator subprocess failed twice in a row for milestone M11, run 1. Last output: You've hit your session limit \u00b7 resets 11am (UTC)",
+    "whereWeGo": "Resolve the recorded blocker or adjust the harness/process. Automatic role/verdict retries are enabled, but this safety escalation remains blocked until its recorded precondition is resolved.",
+    "nextAction": "Review team/game-night-v1/escalation/20260903-064353_escalation-M11-run1.md, make the necessary evidence-backed change, then allow the next scheduled coordinator run to resume."
   },
   "milestones": [
     {
@@ -96,6 +96,12 @@
     {
       "id": "ALL",
       "title": "Milestone ALL",
+      "status": "queued",
+      "detail": "Current milestone; see the curated checkpoint for the latest outcome."
+    },
+    {
+      "id": "M11",
+      "title": "Milestone M11",
       "status": "current",
       "detail": "Current milestone; see the curated checkpoint for the latest outcome."
     }
@@ -464,6 +470,14 @@
       "status": "passed",
       "title": "ALL: PASS \u2014 ALL MILESTONES",
       "detail": "All planned milestones are complete for the current spec; the coordinator correctly skipped role invocation."
+    },
+    {
+      "fingerprint": "2026-09-03T06:43:56Z|M11|ESCALATED",
+      "time": "2026-09-03T06:43:56Z",
+      "milestone": "M11",
+      "status": "escalated",
+      "title": "M11: ESCALATED",
+      "detail": "M11 stopped without an approved result: generator subprocess failed twice in a row for milestone M11, run 1. Last output: You've hit your session limit \u00b7 resets 11am (UTC)"
     }
   ],
   "harnessEvolution": [
@@ -477,9 +491,9 @@
   ],
   "openItems": [
     {
-      "kind": "Current work",
-      "status": "ready",
-      "text": "Review the full integration evidence and decide whether to begin real-player testing or revise the spec."
+      "kind": "Blocking issue",
+      "status": "open",
+      "text": "M11 stopped without an approved result: generator subprocess failed twice in a row for milestone M11, run 1. Last output: You've hit your session limit \u00b7 resets 11am (UTC)"
     }
   ]
 }
