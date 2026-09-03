@@ -5,7 +5,7 @@
     "workspace": "team/game-night-v1",
     "harnessRepo": "https://github.com/badralbudur/game-night-harness",
     "deliverableRepo": "https://github.com/badralbudur/game-night",
-    "lastUpdated": "2026-09-03T15:18:15Z"
+    "lastUpdated": "2026-09-03T17:07:06Z"
   },
   "overview": {
     "currentMilestone": "M11",
@@ -20,17 +20,18 @@
       "M7",
       "M8",
       "M9",
-      "M10"
+      "M10",
+      "M11"
     ],
     "totalMilestones": 12,
     "retryMode": "Automatic \u2014 bounded retries enabled",
     "workspaceStatus": "Ready for next scheduled run"
   },
   "checkpoint": {
-    "headline": "M11: DECISION REQUIRED",
-    "whereWeAre": "M11 requires a user-only decision from evaluator: >",
-    "whereWeGo": "The harness is paused at this milestone; a user answer must be recorded in decisions.md and reflected in an approved spec/config revision before it resumes.",
-    "nextAction": "Review team/game-night-v1/decision/20260903-151812_M11-evaluator-decision.md and answer the one question through the configured origin channel."
+    "headline": "M11: PASS \u2014 ALL MILESTONES",
+    "whereWeAre": "M11 passed independent evaluation and its approved PR merged into main; all planned milestones are complete.",
+    "whereWeGo": "The harness has converged on the current spec version. Further work requires a user-approved spec or milestone change.",
+    "nextAction": "Review the full integration evidence and decide whether to begin real-player testing or revise the spec."
   },
   "milestones": [
     {
@@ -102,7 +103,7 @@
     {
       "id": "M11",
       "title": "Milestone M11",
-      "status": "current",
+      "status": "passed",
       "detail": "Current milestone; see the curated checkpoint for the latest outcome."
     }
   ],
@@ -486,6 +487,14 @@
       "status": "decision",
       "title": "M11: DECISION REQUIRED",
       "detail": "M11 requires a user-only decision from evaluator: >"
+    },
+    {
+      "fingerprint": "2026-09-03T17:07:06Z|M11|PASS \u2014 ALL MILESTONES",
+      "time": "2026-09-03T17:07:06Z",
+      "milestone": "M11",
+      "status": "passed",
+      "title": "M11: PASS \u2014 ALL MILESTONES",
+      "detail": "M11 passed independent evaluation and its approved PR merged into main; all planned milestones are complete."
     }
   ],
   "harnessEvolution": [
@@ -499,9 +508,9 @@
   ],
   "openItems": [
     {
-      "kind": "Decision required",
-      "status": "open",
-      "text": ">"
+      "kind": "Current work",
+      "status": "ready",
+      "text": "Review the full integration evidence and decide whether to begin real-player testing or revise the spec."
     }
   ]
 }
