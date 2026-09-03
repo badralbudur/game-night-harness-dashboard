@@ -5,11 +5,11 @@
     "workspace": "team/game-night-v1",
     "harnessRepo": "https://github.com/badralbudur/game-night-harness",
     "deliverableRepo": "https://github.com/badralbudur/game-night",
-    "lastUpdated": "2026-09-03T22:48:46Z"
+    "lastUpdated": "2026-09-03T23:19:19Z"
   },
   "overview": {
-    "currentMilestone": "M12",
-    "currentMilestoneTitle": "Milestone M12",
+    "currentMilestone": "ALL",
+    "currentMilestoneTitle": "Milestone ALL",
     "completedMilestones": [
       "M1",
       "M2",
@@ -29,8 +29,8 @@
     "workspaceStatus": "Ready for next scheduled run"
   },
   "checkpoint": {
-    "headline": "M12: PASS \u2014 ALL MILESTONES",
-    "whereWeAre": "M12 passed independent evaluation and its approved PR merged into main; all planned milestones are complete.",
+    "headline": "ALL: PASS \u2014 ALL MILESTONES",
+    "whereWeAre": "All planned milestones are complete for the current spec; the coordinator correctly skipped role invocation.",
     "whereWeGo": "The harness has converged on the current spec version. Further work requires a user-approved spec or milestone change.",
     "nextAction": "Review the full integration evidence and decide whether to begin real-player testing or revise the spec."
   },
@@ -98,7 +98,7 @@
     {
       "id": "ALL",
       "title": "Milestone ALL",
-      "status": "queued",
+      "status": "current",
       "detail": "Current milestone; see the curated checkpoint for the latest outcome."
     },
     {
@@ -518,6 +518,14 @@
       "status": "passed",
       "title": "M12: PASS \u2014 ALL MILESTONES",
       "detail": "M12 passed independent evaluation and its approved PR merged into main; all planned milestones are complete."
+    },
+    {
+      "fingerprint": "2026-09-03T23:19:19Z|ALL|PASS \u2014 ALL MILESTONES",
+      "time": "2026-09-03T23:19:19Z",
+      "milestone": "ALL",
+      "status": "passed",
+      "title": "ALL: PASS \u2014 ALL MILESTONES",
+      "detail": "All planned milestones are complete for the current spec; the coordinator correctly skipped role invocation."
     }
   ],
   "harnessEvolution": [
