@@ -5,7 +5,7 @@
     "workspace": "team/game-night-v1",
     "harnessRepo": "https://github.com/badralbudur/game-night-harness",
     "deliverableRepo": "https://github.com/badralbudur/game-night",
-    "lastUpdated": "2026-09-03T06:43:56Z"
+    "lastUpdated": "2026-09-03T15:18:15Z"
   },
   "overview": {
     "currentMilestone": "M11",
@@ -24,13 +24,13 @@
     ],
     "totalMilestones": 12,
     "retryMode": "Automatic \u2014 bounded retries enabled",
-    "workspaceStatus": "Needs operator review"
+    "workspaceStatus": "Ready for next scheduled run"
   },
   "checkpoint": {
-    "headline": "M11: ESCALATED",
-    "whereWeAre": "M11 stopped without an approved result: generator subprocess failed twice in a row for milestone M11, run 1. Last output: You've hit your session limit \u00b7 resets 11am (UTC)",
-    "whereWeGo": "Resolve the recorded blocker or adjust the harness/process. Automatic role/verdict retries are enabled, but this safety escalation remains blocked until its recorded precondition is resolved.",
-    "nextAction": "Review team/game-night-v1/escalation/20260903-064353_escalation-M11-run1.md, make the necessary evidence-backed change, then allow the next scheduled coordinator run to resume."
+    "headline": "M11: DECISION REQUIRED",
+    "whereWeAre": "M11 requires a user-only decision from evaluator: >",
+    "whereWeGo": "The harness is paused at this milestone; a user answer must be recorded in decisions.md and reflected in an approved spec/config revision before it resumes.",
+    "nextAction": "Review team/game-night-v1/decision/20260903-151812_M11-evaluator-decision.md and answer the one question through the configured origin channel."
   },
   "milestones": [
     {
@@ -478,6 +478,14 @@
       "status": "escalated",
       "title": "M11: ESCALATED",
       "detail": "M11 stopped without an approved result: generator subprocess failed twice in a row for milestone M11, run 1. Last output: You've hit your session limit \u00b7 resets 11am (UTC)"
+    },
+    {
+      "fingerprint": "2026-09-03T15:18:15Z|M11|DECISION REQUIRED",
+      "time": "2026-09-03T15:18:15Z",
+      "milestone": "M11",
+      "status": "decision",
+      "title": "M11: DECISION REQUIRED",
+      "detail": "M11 requires a user-only decision from evaluator: >"
     }
   ],
   "harnessEvolution": [
@@ -491,9 +499,9 @@
   ],
   "openItems": [
     {
-      "kind": "Blocking issue",
+      "kind": "Decision required",
       "status": "open",
-      "text": "M11 stopped without an approved result: generator subprocess failed twice in a row for milestone M11, run 1. Last output: You've hit your session limit \u00b7 resets 11am (UTC)"
+      "text": ">"
     }
   ]
 }
